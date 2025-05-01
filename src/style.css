@@ -22,7 +22,7 @@ h3,
 h4 {
   color: #23be13;
   font-family: "Montserrat", "Futura", sans-serif;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 h1 {
@@ -31,7 +31,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-block-end: 2rem;
 }
 
 h3 {
@@ -39,7 +39,7 @@ h3 {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
 
 img {
@@ -79,12 +79,36 @@ img {
   background-color: #3fb933;
 }
 
+.hover-underline {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline::after {
+  /* background: linear-gradient(to right, #1a8e0d, #23be13); */
+  background: linear-gradient(to right, #23be13, #fdfbd4);
+  /* linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%) */
+  bottom: -2px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+  width: 100%;
+}
+
+.hover-underline:hover::after {
+  transform: scaleX(1);
+}
+
 section {
   padding: 80px 0;
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-block-end: 50px;
   text-align: center;
 }
 
@@ -109,11 +133,11 @@ section {
 }
 
 .mb-3 {
-  margin-bottom: 1.5rem;
+  margin-block-end: 1.5rem;
 }
 
 .mb-5 {
-  margin-bottom: 3rem;
+  margin-block-end: 3rem;
 }
 
 /* HEADER I NAWIGACJA */
@@ -146,7 +170,7 @@ header.scrolled {
 
 .logo img {
   height: 50px;
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 
 .logo h1 {
@@ -161,7 +185,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 30px;
+  margin-inline-start: 30px;
 }
 
 nav ul li a {
@@ -191,8 +215,8 @@ nav ul li a:hover {
   color: #fff;
   display: flex;
   height: 100vh;
+  margin-block-start: 80px;
   overflow: hidden;
-  padding-top: 80px;
   position: relative;
   text-align: center;
 }
@@ -290,7 +314,7 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-block-start: 40px;
 }
 
 .feature {
@@ -298,7 +322,7 @@ nav ul li a:hover {
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   flex-basis: calc(33.333% - 20px);
-  margin-bottom: 30px;
+  margin-block-end: 30px;
   min-width: 250px;
   padding: 20px;
   text-align: center;
@@ -307,7 +331,7 @@ nav ul li a:hover {
 .feature i {
   color: #23be13;
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  margin-block-end: 15px;
 }
 
 /* Podstawowe style dla animowanych elementów */
@@ -416,16 +440,16 @@ nav ul li a:hover {
 }
 
 .service-content h3 {
-  margin-bottom: 15px;
+  margin-block-end: 15px;
 }
 
 .service-content p {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .service-content .btn {
   align-self: flex-start;
-  margin-top: auto;
+  margin-block-start: auto;
 }
 
 .service-content ul {
@@ -481,7 +505,7 @@ nav ul li a:hover {
 .category i {
   color: #23be13;
   font-size: 3rem;
-  margin-bottom: 15px;
+  margin-block-end: 15px;
 }
 
 /* .brands {
@@ -490,7 +514,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  margin-top: 50px;
+  margin-block-start: 50px;
 } */
 
 /* .brand {
@@ -551,7 +575,7 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .filter-btn {
@@ -620,7 +644,7 @@ nav ul li a:hover {
 
 .portfolio-overlay h3 {
   color: #fff;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .portfolio-overlay p {
@@ -629,7 +653,7 @@ nav ul li a:hover {
 
 /* Style dla przycisku "Załaduj więcej" */
 .load-more-container {
-  margin-top: 40px;
+  margin-block-start: 40px;
   text-align: center;
 }
 
@@ -733,13 +757,13 @@ nav ul li a:hover {
 
 .lightbox-caption {
   color: #fff;
-  margin-top: 20px;
+  margin-block-start: 20px;
   text-align: center;
 }
 
 .lightbox-caption h3 {
   color: #fff;
-  margin-bottom: 5px;
+  margin-block-end: 5px;
 }
 
 .lightbox-counter {
@@ -779,13 +803,13 @@ nav ul li a:hover {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
+  margin-block-end: 30px;
   padding: 30px;
 }
 
 .testimonial-content {
   font-style: italic;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .testimonial-author {
@@ -796,18 +820,18 @@ nav ul li a:hover {
 .testimonial-author img {
   border-radius: 50%;
   height: 60px;
-  margin-right: 15px;
+  margin-inline-end: 15px;
   object-fit: cover;
   width: 60px;
 }
 
 .author-info h4 {
-  margin-bottom: 5px;
+  margin-block-end: 5px;
 }
 
 .rating {
   color: #50d142;
-  margin-top: 5px;
+  margin-block-start: 5px;
 }
 
 /* KONTAKT */
@@ -828,25 +852,35 @@ nav ul li a:hover {
 }
 
 .info-item {
+  align-items: center;
   display: flex;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .info-item i {
   color: #23be13;
   font-size: 1.5rem;
-  margin-right: 15px;
+  margin-inline-end: 15px;
   min-width: 30px;
 }
 
+.info-item p {
+  margin-block-end: 5px;
+}
+
+.info-item a {
+  color: #333;
+  text-decoration: none;
+}
+
 .form-group {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .form-group label {
   display: block;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-block-end: 5px;
 }
 
 .form-control {
@@ -873,7 +907,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  margin-bottom: 30px;
+  margin-block-end: 30px;
 }
 
 .footer-section {
@@ -883,26 +917,45 @@ footer {
 
 .footer-section h3 {
   color: #fff;
-  margin-bottom: 20px;
+  margin-block-end: 40px;
   position: relative;
 }
 
 .footer-section h3::after {
-  background-color: #50d142;
+  /* background-color: #50d142; */
+  background: linear-gradient(to right, #23be13, #fdfbd4);
   bottom: -10px;
   content: "";
   height: 2px;
   left: 0;
   position: absolute;
-  width: 40px;
+  width: 60px;
+}
+
+.footer-section .info-item {
+  margin-block-end: 10px;
+}
+
+.footer-section .info-item i {
+  color: #fff;
+  font-size: 1rem;
+  margin-inline-end: 5px;
 }
 
 .footer-links {
   list-style: none;
 }
 
+.footer-links i {
+  margin-inline-end: 10px;
+}
+
 .footer-links li {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
+}
+
+.footer-section .info-item li {
+  margin-block-end: 5px;
 }
 
 .footer-links a {
@@ -939,7 +992,8 @@ footer {
 
 .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  margin-block-start: 20px;
+  padding-block-start: 20px;
   text-align: center;
 }
 
