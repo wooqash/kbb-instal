@@ -13,8 +13,10 @@
   "rules": {
     "prettier/prettier": true,
     "no-descending-specificity": null,
-    "max-nesting-depth": 2,
+    "max-nesting-depth": 4,
     "selector-max-id": 1,
-    "order/properties-alphabetical-order": true
+    "order/properties-alphabetical-order": true,
+    "selector-no-qualifying-type": [true, { "ignore": ["class"] }],
+    "selector-max-compound-selectors": 4
   }
 }

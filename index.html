@@ -1,13 +1,1147 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta
+      name="description"
+      content="Profesjonalne usługi HVAC oraz hurtownia - projektowanie, montaż, serwis instalacji wentylacyjnych i klimatyzacji"
+    />
+    <title>
+      KBB Instal - Kompleksowe rozwiązania wentylacyjne i klimatyzacyjne dla
+      domu i przemysłu
+    </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Tutaj będą style CSS -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">
+          <img src="placeholder-logo.svg" alt="KBB Instal" />
+          <h1>KBB Instal</h1>
+        </div>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+          <ul>
+            <li><a href="#hero">Strona główna</a></li>
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#services">Usługi</a></li>
+            <li><a href="#wholesale">Hurtownia</a></li>
+            <li><a href="#portfolio">Realizacje</a></li>
+            <li><a href="#testimonials">Opinie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kompleksowe rozwiązania HVAC</h1>
+                <p>Projektowanie, montaż, serwis instalacji wentylacyjnych i klimatyzacyjnych oraz profesjonalna hurtownia</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Zamów usługę</a>
+                    <a href="#wholesale" class="btn btn-secondary">Sprawdź ofertę hurtowni</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Hero Section ze sliderem -->
+    <section id="hero">
+      <div class="hero-slider">
+        <div class="slide active">
+          <img
+            sizes="(min-width: 30em) 28em, 100vw"
+            srcset="
+              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_256/low-angle-people-working-with-drill_pjmnlr.webp   256w,
+              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_512/low-angle-people-working-with-drill_pjmnlr.webp   512w,
+              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_768/low-angle-people-working-with-drill_pjmnlr.webp   768w,
+              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_1024/low-angle-people-working-with-drill_pjmnlr.webp 1024w,
+              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_1280/low-angle-people-working-with-drill_pjmnlr.webp 1280w
+            "
+            src="https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_512/low-angle-people-working-with-drill_pjmnlr.webp"
+            alt
+          />
+        </div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://www.freepik.com/free-photo/technician-service-checking-air-conditioner_10879877.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://www.freepik.com/free-photo/technician-is-checking-air-conditioner_11035405.jpg&quot;);
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url(&quot;https://www.freepik.com/free-photo/hvac-technician-working-capacitor-part-condensing-unit_10879872.jpg&quot;);
+          "
+        ></div>
+      </div>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1>Kompleksowe rozwiązania HVAC domu i przemysłu</h1>
+          <p>
+            Projektowanie, montaż, serwis instalacji wentylacyjnych i
+            klimatyzacyjnych oraz profesjonalna hurtownia
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn">Zamów usługę</a>
+            <a href="#wholesale" class="btn btn-secondary"
+              >Sprawdź ofertę hurtowni</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="slider-dots">
+        <!-- Kropki nawigacyjne będą dodane przez JavaScript -->
+      </div>
+    </section>
+
+    <!-- O nas -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>O naszej firmie</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              KBB Instal to firma z wieloletnim doświadczeniem w branży
+              wentylacyjnej i klimatyzacyjnej. Specjalizujemy się w
+              projektowaniu, montażu i serwisie instalacji HVAC dla klientów
+              indywidualnych i biznesowych.
+            </p>
+            <p>
+              Nasza firma to również profesjonalna hurtownia oferująca szeroki
+              asortyment urządzeń i akcesoriów niezbędnych do instalacji
+              wentylacyjnych i klimatyzacyjnych. Dzięki kompleksowej ofercie
+              jesteśmy w stanie zapewnić naszym klientom pełne wsparcie od
+              projektu po realizację.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Zespół KBB Instal"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <i class="fas fa-certificate"></i>
+            <h3>Certyfikowani specjaliści</h3>
+            <p>
+              Nasz zespół składa się z wykwalifikowanych i certyfikowanych
+              specjalistów z wieloletnim doświadczeniem.
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-clock"></i>
+            <h3>15 lat doświadczenia</h3>
+            <p>
+              Od 15 lat dostarczamy najwyższej jakości usługi i produkty dla
+              naszych klientów.
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <h3>Ponad 1000 zadowolonych klientów</h3>
+            <p>
+              Zaufało nam już ponad 1000 klientów indywidualnych i biznesowych.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usługi -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nasze usługi</h2>
+        </div>
+        <div class="services-container">
+          <div class="service-card">
+            <div
+              class="service-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
+              "
+            ></div>
+            <div class="service-content">
+              <h3>Projektowanie systemów</h3>
+              <p>
+                Oferujemy obsługę uprawnionych projektantów dla przygotowania
+                inwestycji, oraz w trakcie realizacji projektu w zakresie
+                instalacji i wentylacji klimatyzacji. Priorytetem działalności
+                firmy jest zoptymalizowanie wydatków (inwestycyjnych i
+                eksploatacyjnych ponoszonych przez inwestorów i użytkowników.
+              </p>
+              <a href="#contact" class="btn service-btn">Zapytaj o usługę</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div
+              class="service-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
+              "
+            ></div>
+            <div class="service-content">
+              <h3>Montaż instalacji</h3>
+              <p>
+                Świadczymy szeroki zakres usług w zakresie wykonania instalacji
+                zapewniającej komfort cieplny oraz przygotowanie powietrza dla:
+              </p>
+              <ul>
+                <li>pomieszczeń domów mieszkalnych</li>
+                <li>biurowców i hoteli</li>
+                <li>restauracji i lokali użyteczności publicznej</li>
+                <li>przemysłowych instalacji technologicznych</li>
+                <li>obiektów sportowych</li>
+                <li>
+                  obiektów specjalnego przeznaczenia (serwerownie, laboratoria,
+                  pomieszczenia opieki medycznej itp…)
+                </li>
+              </ul>
+              <a href="#contact" class="btn service-btn">Zapytaj o usługę</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div
+              class="service-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
+              "
+            ></div>
+            <div class="service-content">
+              <h3>Serwis i konserwacja</h3>
+              <p>
+                Regularne przeglądy, serwis i konserwacja systemów
+                wentylacyjnych i klimatyzacyjnych. Utrzymanie instalacji
+                wentylacji technologicznych w zakładach produkcyjnych oraz
+                regulacje i pomiary (Badanie skuteczności instalacji
+                wentylacji). Specjalistyczne przeglądy instalacji zgodnie z
+                wymaganiami ppoż.
+              </p>
+              <a href="#contact" class="btn service-btn">Zapytaj o usługę</a>
+            </div>
+          </div>
+          <div class="service-card">
+            <div
+              class="service-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
+              "
+            ></div>
+            <div class="service-content">
+              <h3>Naprawy awaryjne</h3>
+              <p>
+                Szybkie i skuteczne naprawy awaryjne systemów wentylacyjnych i
+                klimatyzacyjnych. Oferujemy pogotowie dla systemów wrażliwych
+                np. serwerownie <strong>24h/dobę</strong>
+              </p>
+              <a href="#contact" class="btn service-btn">Zapytaj o usługę</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hurtownia -->
+    <section id="wholesale">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nasza hurtownia</h2>
+        </div>
+        <div class="text-center mb-5">
+          <p>
+            W naszej hurtowni znajdziesz szeroki asortyment urządzeń i
+            akcesoriów niezbędnych do instalacji wentylacyjnych i
+            klimatyzacyjnych. Oferujemy produkty renomowanych producentów w
+            konkurencyjnych cenach.
+          </p>
+          <a href="#contact" class="btn warehouse-btn"
+            >Zapytaj o dostępność produktów</a
+          >
+        </div>
+        <div class="categories">
+          <div class="category">
+            <i class="fas fa-wind"></i>
+            <h3>Systemy wentylacyjne</h3>
+            <p>
+              Kanały, kratki, wentylatory i inne elementy systemów
+              wentylacyjnych.
+            </p>
+          </div>
+          <div class="category">
+            <i class="fas fa-snowflake"></i>
+            <h3>Klimatyzatory</h3>
+            <p>Klimatyzatory split, multi-split, kanałowe i inne.</p>
+          </div>
+          <div class="category">
+            <i class="fas fa-tools"></i>
+            <h3>Materiały eksploatacyjne</h3>
+            <p>Profesjonalne narzędzia do montażu i serwisu systemów HVAC.</p>
+          </div>
+          <div class="category">
+            <i class="fas fa-cogs"></i>
+            <h3>Części zamienne</h3>
+            <p>
+              Szeroki wybór części zamiennych do systemów wentylacyjnych i
+              klimatyzacyjnych.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mb-5 mt-5">
+          <h3>Współpracujemy z renomowanymi producentami</h3>
+        </div>
+        <div class="brands">
+          <div class="brand">
+            <img
+              src="./logotypes/bartosz.webp"
+              alt="Bartosz - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/clima-gold.webp"
+              alt="Clima gold - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/cwk.webp"
+              alt="Cwk - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/daikin.webp"
+              alt="Daikin - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/domus-vents.webp"
+              alt="Domus vents - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/fujitsu.webp"
+              alt="Fujitsu - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/harmann.webp"
+              alt="Harmann - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/kaisai.webp"
+              alt="Kaisai - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/klimor.webp"
+              alt="Klimor - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/komfovent.webp"
+              alt="Komfovent - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/lg.webp"
+              alt="LG - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/mdv.webp"
+              alt="MDV - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/rdj-klima.webp"
+              alt="Rdj Klima - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/rosenberg.webp"
+              alt="Rosenberg - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/swegon.webp"
+              alt="Swegon - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/systemair.webp"
+              alt="Systemair - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/uniwersal.webp"
+              alt="Uniwersal - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+          <div class="brand">
+            <img
+              src="./logotypes/venture-industries.webp"
+              alt="Venture-industries - partner KBB Instal"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nasze realizacje</h2>
+        </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">Wszystkie</button>
+          <button class="filter-btn" data-filter="abb">ABB</button>
+          <button class="filter-btn" data-filter="nowa-szkola">
+            Fabryka "Nowa szkoła"
+          </button>
+          <button class="filter-btn" data-filter="k-flex">K-Flex</button>
+          <button class="filter-btn" data-filter="manufaktura">
+            Manufaktura
+          </button>
+          <button class="filter-btn" data-filter="rossmann">Rossmann</button>
+          <button class="filter-btn" data-filter="teatr-studyjny">
+            Teatr studyjny
+          </button>
+          <button class="filter-btn" data-filter="uml">UMŁ</button>
+          <button class="filter-btn" data-filter="wytwornia">Wytwórnia</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-12.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-6.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-7.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-8.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-9.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-10.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-3.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-4.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="abb">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-5.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="nowa-szkola">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka "Nowa szkoła"</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="nowa-szkola">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka "Nowa szkoła"</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="nowa-szkola">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-3.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka "Nowa szkoła"</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="k-flex">
+            <img
+              src="./projects/k-flex/k-flex-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>K-Flex</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="k-flex">
+            <img
+              src="./projects/k-flex/k-flex-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>K-Flex</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="k-flex">
+            <img
+              src="./projects/k-flex/k-flex-3.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>K-Flex</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="k-flex">
+            <img
+              src="./projects/k-flex/k-flex-4.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>K-Flex</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-3.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-4.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-5.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-6.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="manufaktura">
+            <img
+              src="./projects/manufaktura/manufaktura-7.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="rossmann">
+            <img
+              src="./projects/rossmann/rossmann-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="rossmann">
+            <img
+              src="./projects/rossmann/rossmann-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="rossmann">
+            <img
+              src="./projects/rossmann/rossmann-3.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="rossmann">
+            <img
+              src="./projects/rossmann/rossmann-4.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="teatr-studyjny">
+            <img
+              src="./projects/teatr-studyjny/teatr-studyjny-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Teatr studyjny</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="teatr-studyjny">
+            <img
+              src="./projects/teatr-studyjny/teatr-studyjny-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Teatr studyjny</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="uml">
+            <img
+              src="./projects/uml/uml-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Urząd Miasta Łodzi</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="wytwornia">
+            <img
+              src="./projects/wytwornia/wytwornia-1.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Wytwórnia</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="wytwornia">
+            <img
+              src="./projects/wytwornia/wytwornia-2.webp"
+              alt="Projekt 1"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Wytwórnia</h3>
+              <p>Instalacja klimatyzacji</p>
+            </div>
+          </div>
+        </div>
+        <div class="load-more-container">
+          <button id="load-more-btn" class="btn">Załaduj więcej zdjęć</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Gallery -->
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-content">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-controls">
+          <button class="lightbox-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="lightbox-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="lightbox-image-container">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-caption">
+          <h3 id="lightbox-title"></h3>
+          <p id="lightbox-description"></p>
+        </div>
+        <div class="lightbox-counter">
+          <span id="current-index"></span> / <span id="total-images"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Opinie -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <h2>Opinie naszych klientów</h2>
+        </div>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                Profesjonalna obsługa od A do Z. Fachowe doradztwo, szybka
+                realizacja i wysoka jakość wykonania. Polecam!
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Jan Kowalski"
+                loading="lazy"
+              />
+              <div class="author-info">
+                <h4>Jan Kowalski</h4>
+                <p>Łódź</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                Świetna firma! Zamówiłem klimatyzację do mieszkania, wszystko
+                zostało wykonane szybko i profesjonalnie. Dodatkowo otrzymałem
+                fachowe porady dotyczące eksploatacji.
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Anna Nowak"
+                loading="lazy"
+              />
+              <div class="author-info">
+                <h4>Anna Nowak</h4>
+                <p>Kraków</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <p>
+                Korzystamy z usług KBB Instal od kilku lat. Firma zajmuje się
+                serwisem i konserwacją klimatyzacji w naszym biurowcu. Zawsze
+                terminowo i profesjonalnie. Polecam!
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/62.jpg"
+                alt="Marek Wiśniewski"
+                loading="lazy"
+              />
+              <div class="author-info">
+                <h4>Marek Wiśniewski</h4>
+                <p>Wrocław</p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skontaktuj się z nami</h2>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Informacje kontaktowe</h3>
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <p>ul. Św. Teresy od Dzieciątka Jezus 105J</p>
+                <p>91-231 Łódź</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <p>+48 502 522 398</p>
+                <p>+48 502 522 397 (Hurtownia)</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <p>biuro@kbb-instal.pl</p>
+                <p>k.brzozowski@kbb-instal.pl</p>
+                <p>b.brzozowska@kbb-instal.pl</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <p>Poniedziałek - Piątek: 8:00 - 16:00</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps?q=R95V%2BM8+Łódź&output=embed"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+          <div class="contact-form">
+            <h3>Wyślij wiadomość</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Imię i nazwisko</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Temat</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  class="form-control"
+                  required
+                >
+                  <option value="">Wybierz temat</option>
+                  <option value="services">Usługi</option>
+                  <option value="warehouse">Hurtownia</option>
+                  <option value="others">Inne</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Wiadomość</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-control"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Wyślij wiadomość</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>KBB Instal</h3>
+            <p>
+              Profesjonalne usługi HVAC oraz hurtownia - projektowanie, montaż,
+              serwis instalacji wentylacyjnych i klimatyzacji.
+            </p>
+            <ul class="footer-links">
+              <li><i class="fas fa-phone"></i> +48 502 522 398</li>
+              <li><i class="fas fa-phone"></i> +48 502 522 397</li>
+              <li><i class="fas fa-envelope"></i> biuro@kbb-instal.pl</li>
+              <li>
+                <i class="fas fa-envelope"></i> k.brzozowski@kbb-instal.pl
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i> b.brzozowska@kbb-instal.pl
+              </li>
+              <li><i class="fas fa-clock"></i> Pon-Pt: 8:00-16:00,</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Usługi</h3>
+            <ul class="footer-links">
+              <li><a href="#services">Projektowanie systemów</a></li>
+              <li><a href="#services">Montaż instalacji</a></li>
+              <li><a href="#services">Serwis i konserwacja</a></li>
+              <li><a href="#services">Naprawy awaryjne</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Hurtownia</h3>
+            <ul class="footer-links">
+              <li><a href="#wholesale">Systemy wentylacyjne</a></li>
+              <li><a href="#wholesale">Klimatyzatory</a></li>
+              <li><a href="#wholesale">Materiały eksploatacyjne</a></li>
+              <li><a href="#wholesale">Części zamienne</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Dane firmowe</h3>
+            <ul class="footer-links">
+              <li>KBB Pro Invest Sp. z o. o.</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> ul. Św. Teresy od
+                dzieciątka Jezus 105J, 91-222 Łódź
+              </li>
+              <li>NIP: 947 199 65 58</li>
+              <li>REGON: KRS 0000728143</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 KBB Instal . Wszelkie prawa zastrzeżone.</p>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/src/index.ts"></script>
   </body>
 </html>
