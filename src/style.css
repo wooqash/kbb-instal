@@ -990,11 +990,32 @@ footer {
   background-color: #50d142;
 }
 
-.copyright {
+.footer-bottom-belt {
+  align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-block-start: 20px;
   padding-block-start: 20px;
+}
+
+.copyright {
   text-align: center;
+}
+
+.copyright p {
+  margin-bottom: 0;
+}
+
+.implementation {
+  font-size: 0.9rem;
+}
+
+.implementation a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* RESPONSYWNOŚĆ */
@@ -1066,6 +1087,10 @@ footer {
 
   .brand img {
     max-height: 60px;
+  }
+
+  .footer-bottom-belt {
+    justify-content: center;
   }
 }
 

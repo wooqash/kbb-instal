@@ -3,7 +3,7 @@ import { initHeader } from "./scripts/header";
 import { initAnimation } from "./scripts/animations";
 import { initHeroSlider } from "./scripts/hero";
 import { initGallery } from "./scripts/gallery";
-import { protectInfo } from "./scripts/protect-info";
+import { protectInfo, copyrightDate } from "./scripts/protect-info";
 
 export { sum } from "./sum";
 
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initAnimation();
   initGallery();
   protectInfo();
+  copyrightDate();
 
   if (subjectField) {
     serviceBtns.forEach(button => {
