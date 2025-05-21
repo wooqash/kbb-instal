@@ -7,7 +7,13 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
-
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+      - name: Installing dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -16,5 +22,5 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps
           port: 990
-          local-dir: ./dist/
+          local-dir: /dist/
           server-dir: /public_html/test/
