@@ -2,7 +2,7 @@ const filterBtns: NodeListOf<HTMLButtonElement> =
   document.querySelectorAll(".filter-btn");
 const portfolioItems: NodeListOf<HTMLDivElement> =
   document.querySelectorAll(".portfolio-item");
-const loadMoreBtn = document.getElementById("load-more-btn");
+// const loadMoreBtn = document.getElementById("load-more-btn");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById(
   "lightbox-image"

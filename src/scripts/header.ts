@@ -1,4 +1,6 @@
 export const initHeader = () => {
+  const MOBILE = 768;
+  // const isMobile = false;
   // Elementy DOM
   const header = document.getElementById("header");
   const mobileMenuBtn: HTMLButtonElement | null =
@@ -7,6 +9,14 @@ export const initHeader = () => {
   const navLinks: NodeListOf<HTMLAnchorElement> =
     document.querySelectorAll("nav ul li a");
 
+  const checkIsMobile = () => {
+    if (window.innerWidth < MOBILE) {
+      header?.classList.add("mobile");
+    } else {
+      header?.classList.remove("mobile");
+    }
+  };
+
   // Sticky Header
   window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
@@ -14,6 +24,14 @@ export const initHeader = () => {
     } else {
       header?.classList.remove("scrolled");
     }
+  });
+
+  window.addEventListener("resize", function () {
+    checkIsMobile();
+  });
+
+  window.addEventListener("DOMContentLoaded", function () {
+    checkIsMobile();
   });
 
   // Mobile Menu Toggle
@@ -51,7 +69,16 @@ export const initHeader = () => {
   navLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
+      if (Array.from(document.querySelectorAll("nav .active")).length === 0) {
+        navLinks[0].classList.add("active");
+      } else {
+        document
+          .querySelectorAll("nav .active")
+          .forEach(link => link.classList.remove("active"));
+        link.classList.add("active");
+      }
 
+      // console.log(document.querySelectorAll('nav .active'))
       const targetId = this.getAttribute("href");
       if (targetId) {
         const targetSection: HTMLAnchorElement | null =

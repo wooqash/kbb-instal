@@ -1,14 +1,16 @@
-const contactForm = document.getElementById("contactForm");
+const contactForm = <HTMLFormElement>document.getElementById("contactForm");
 // Obsługa formularza kontaktowego
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     // Walidacja formularza
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+    const name = (<HTMLInputElement>document.getElementById("name")).value;
+    const email = (<HTMLInputElement>document.getElementById("email")).value;
+    const subject = (<HTMLInputElement>document.getElementById("subject"))
+      .value;
+    const message = (<HTMLInputElement>document.getElementById("message"))
+      .value;
 
     if (!name || !email || !subject || !message) {
       showFormAlert("Proszę wypełnić wszystkie wymagane pola", "error");
