@@ -2,100 +2,224 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Profesjonalne usługi HVAC oraz hurtownia - projektowanie, montaż, serwis instalacji wentylacyjnych i klimatyzacji"
     />
     <title>
-      KBB Instal - Kompleksowe rozwiązania wentylacyjne i klimatyzacyjne dla
-      domu i przemysłu
+      Kompleksowe rozwiązania wentylacyjne i klimatyzacyjne dla domu i przemysłu
+      | KBB Instal
     </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Preload hero image -->
+    <link
+      rel="preload"
+      as="image"
+      href="./public/hero/hero-1-1600.webp"
+      imagesrcset="./public/hero/hero-1-480.webp 480w, ./public/hero/hero-1-800.webp 800w, ./public/hero/hero-1-1600.webp 1600w, ./public/hero/hero-1-1920.webp 1920w, ./public/hero/hero-1-2650.webp 2650w"
+      imagesizes="100vw"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./public/hero/hero-2-1600.webp"
+      imagesrcset="./public/hero/hero-2-480.webp 480w, ./public/hero/hero-2-800.webp 800w, ./public/hero/hero-2-1600.webp 1600w, ./public/hero/hero-2-1920.webp 1920w, ./public/hero/hero-1-2650.webp 2650w"
+      imagesizes="100vw"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./public/hero/hero-3-1600.webp"
+      imagesrcset="./public/hero/hero-3-480.webp 480w, ./public/hero/hero-3-800.webp 800w, ./public/hero/hero-3-1600.webp 1600w, ./public/hero/hero-3-1920.webp 1920w, ./public/hero/hero-1-2650.webp 2650w"
+      imagesizes="100vw"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./public/hero/hero-4-1600.webp"
+      imagesrcset="./public/hero/hero-4-480.webp 480w, ./public/hero/hero-4-800.webp 800w, ./public/hero/hero-4-1600.webp 1600w, ./public/hero/hero-4-1920.webp 1920w, ./public/hero/hero-1-2650.jpg 2650w"
+      imagesizes="100vw"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Tutaj będą style CSS -->
     <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <!-- DO USUNIECIA -->
+    <meta name="”robots”" content="”noindex”" />
   </head>
   <body>
     <!-- Header -->
     <header id="header">
       <div class="container header-container">
         <div class="logo">
-          <img src="placeholder-logo.svg" alt="KBB Instal" />
-          <h1>KBB Instal</h1>
+          <img
+            src="./public/kbb-logo-alt.svg"
+            alt="Logotyp KBB Instal kierujący do strony głównej"
+          />
         </div>
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
         <nav id="nav">
           <ul>
-            <li><a href="#hero">Strona główna</a></li>
-            <li><a href="#about">O nas</a></li>
-            <li><a href="#services">Usługi</a></li>
-            <li><a href="#wholesale">Hurtownia</a></li>
-            <li><a href="#portfolio">Realizacje</a></li>
-            <li><a href="#testimonials">Opinie</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li><a class="hover-underline" href="#hero">Strona główna</a></li>
+            <li><a class="hover-underline" href="#about">O nas</a></li>
+            <li><a class="hover-underline" href="#services">Usługi</a></li>
+            <li><a class="hover-underline" href="#wholesale">Hurtownia</a></li>
+            <li><a class="hover-underline" href="#portfolio">Realizacje</a></li>
+            <li><a class="hover-underline" href="#testimonials">Opinie</a></li>
+            <li><a class="hover-underline" href="#contact">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
-    <!-- Hero Section -->
-    <!-- <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Kompleksowe rozwiązania HVAC</h1>
-                <p>Projektowanie, montaż, serwis instalacji wentylacyjnych i klimatyzacyjnych oraz profesjonalna hurtownia</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn">Zamów usługę</a>
-                    <a href="#wholesale" class="btn btn-secondary">Sprawdź ofertę hurtowni</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
     <!-- Hero Section ze sliderem -->
     <section id="hero">
       <div class="hero-slider">
         <div class="slide active">
-          <img
-            sizes="(min-width: 30em) 28em, 100vw"
-            srcset="
-              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_256/low-angle-people-working-with-drill_pjmnlr.webp   256w,
-              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_512/low-angle-people-working-with-drill_pjmnlr.webp   512w,
-              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_768/low-angle-people-working-with-drill_pjmnlr.webp   768w,
-              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_1024/low-angle-people-working-with-drill_pjmnlr.webp 1024w,
-              https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_1280/low-angle-people-working-with-drill_pjmnlr.webp 1280w
-            "
-            src="https://res.cloudinary.com/zwds/image/upload/v1741477687/KBB/f_auto,q_70,w_512/low-angle-people-working-with-drill_pjmnlr.webp"
-            alt
-          />
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              sizes="(max-width: 300px) 0, 100vw"
+              srcset="
+                ./public/hero/hero-1-480.webp 480w,
+                ./public/hero/hero-1-800.webp 800w
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 801px)"
+              sizes="(max-width: 2650px) 100vw, 2650px"
+              srcset="
+                ./public/hero/hero-1-1600.webp 1600w,
+                ./public/hero/hero-1-1920.webp 1920w,
+                ./public/hero/hero-1-2650.webp 2650w
+              "
+              type="image/webp"
+            />
+            <img
+              src="./public/hero/hero-1-800.webp"
+              alt="Instalacja wentylacji w nowoczesnym budynku komercyjnym – montaż wentylacji Łódź i okolice"
+              width="800"
+              height="534"
+              class="hero-image"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
-        <div
-          class="slide"
-          style="
-            background-image: url(&quot;https://www.freepik.com/free-photo/technician-service-checking-air-conditioner_10879877.jpg&quot;);
-          "
-        ></div>
-        <div
-          class="slide"
-          style="
-            background-image: url(&quot;https://www.freepik.com/free-photo/technician-is-checking-air-conditioner_11035405.jpg&quot;);
-          "
-        ></div>
-        <div
-          class="slide"
-          style="
-            background-image: url(&quot;https://www.freepik.com/free-photo/hvac-technician-working-capacitor-part-condensing-unit_10879872.jpg&quot;);
-          "
-        ></div>
+        <div class="slide">
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              sizes="(max-width: 300px) 0, 100vw"
+              srcset="
+                ./public/hero/hero-2-480.webp 480w,
+                ./public/hero/hero-2-800.webp 800w
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 801px)"
+              sizes="(max-width: 2650px) 100vw, 2650px"
+              srcset="
+                ./public/hero/hero-2-1600.webp 1600w,
+                ./public/hero/hero-2-1920.webp 1920w,
+                ./public/hero/hero-2-2650.webp 2650w
+              "
+              type="image/webp"
+            />
+            <img
+              src="./public/hero/hero-2-800.webp"
+              alt="Przemysłowe systemy wentylacyjne na dachu – profesjonalna wentylacja Łódź i województwo łódzkie"
+              width="800"
+              height="534"
+              class="hero-image"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              sizes="(max-width: 300px) 0, 100vw"
+              srcset="
+                ./public/hero/hero-3-480.webp 480w,
+                ./public/hero/hero-3-800.webp 800w
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 801px)"
+              sizes="(max-width: 2650px) 100vw, 2650px"
+              srcset="
+                ./public/hero/hero-3-1600.webp 1600w,
+                ./public/hero/hero-3-1920.webp 1920w,
+                ./public/hero/hero-3-2650.webp 2650w
+              "
+              type="image/webp"
+            />
+            <img
+              src="./public/hero/hero-3-800.webp"
+              alt="Systemy HVAC na dachu budynku – instalacje wentylacyjne i klimatyzacyjne Łódź"
+              width="800"
+              height="571"
+              class="hero-image"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+        <div class="slide">
+          <picture>
+            <source
+              media="(max-width: 800px)"
+              sizes="(max-width: 300px) 0, 100vw"
+              srcset="
+                ./public/hero/hero-4-480.webp 480w,
+                ./public/hero/hero-4-800.webp 800w
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 801px)"
+              sizes="(max-width: 2650px) 100vw, 2650px"
+              srcset="
+                ./public/hero/hero-4-1600.webp 1600w,
+                ./public/hero/hero-4-1920.webp 1920w,
+                ./public/hero/hero-4-2650.webp 2650w
+              "
+              type="image/webp"
+            />
+            <img
+              src="./public/hero/hero-4-800.webp"
+              alt="Kobieta korzystająca z klimatyzacji w domu – montaż klimatyzacji Łódź dla klientów indywidualnych"
+              width="800"
+              height="600"
+              class="hero-image"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
       </div>
       <div class="overlay"></div>
       <div class="container">
         <div class="hero-content">
-          <h1>Kompleksowe rozwiązania HVAC domu i przemysłu</h1>
+          <h1>
+            Kompleksowe rozwiązania HVAC<br />
+            dla domu i przemysłu
+          </h1>
           <p>
             Projektowanie, montaż, serwis instalacji wentylacyjnych i
             klimatyzacyjnych oraz profesjonalna hurtownia
@@ -122,10 +246,11 @@
         <div class="about-content">
           <div class="about-text">
             <p>
-              KBB Instal to firma z wieloletnim doświadczeniem w branży
+              KBB Instal to łódzka firma z wieloletnim doświadczeniem w branży
               wentylacyjnej i klimatyzacyjnej. Specjalizujemy się w
               projektowaniu, montażu i serwisie instalacji HVAC dla klientów
-              indywidualnych i biznesowych.
+              indywidualnych i biznesowych głównie na terenie Łodzi oraz
+              województwa łódzkiego.
             </p>
             <p>
               Nasza firma to również profesjonalna hurtownia oferująca szeroki
@@ -179,12 +304,15 @@
         </div>
         <div class="services-container">
           <div class="service-card">
-            <div
-              class="service-image"
-              style="
-                background-image: url(&quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
-              "
-            ></div>
+            <div class="service-image">
+              <img
+                src="./public/services/projektowanie-systemow.webp"
+                width="650"
+                height="433"
+                alt="Projektowanie systemów HVAC na komputerze – projektowanie instalacji wentylacyjnych i klimatyzacyjnych Łódź"
+                loading="lazy"
+              />
+            </div>
             <div class="service-content">
               <h3>Projektowanie systemów</h3>
               <p>
@@ -198,12 +326,15 @@
             </div>
           </div>
           <div class="service-card">
-            <div
-              class="service-image"
-              style="
-                background-image: url(&quot;https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
-              "
-            ></div>
+            <div class="service-image">
+              <img
+                src="./public/services/montaz.webp"
+                width="650"
+                height="433"
+                alt="Montaż wentylacji w budynku komercyjnym – profesjonalne instalacje wentylacyjne Łodzi i województwie łódzkim"
+                loading="lazy"
+              />
+            </div>
             <div class="service-content">
               <h3>Montaż instalacji</h3>
               <p>
@@ -225,12 +356,15 @@
             </div>
           </div>
           <div class="service-card">
-            <div
-              class="service-image"
-              style="
-                background-image: url(&quot;https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
-              "
-            ></div>
+            <div class="service-image">
+              <img
+                src="./public/services/serwis-i-konserwacja.webp"
+                width="650"
+                height="433"
+                alt="Serwis klimatyzacji w domu – konserwacja i przegląd klimatyzacji Łodzi i okolicach"
+                loading="lazy"
+              />
+            </div>
             <div class="service-content">
               <h3>Serwis i konserwacja</h3>
               <p>
@@ -245,12 +379,15 @@
             </div>
           </div>
           <div class="service-card">
-            <div
-              class="service-image"
-              style="
-                background-image: url(&quot;https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80&quot;);
-              "
-            ></div>
+            <div class="service-image">
+              <img
+                src="./public/services/naprawy-awaryjne.webp"
+                width="650"
+                height="366"
+                alt="Serwis i naprawa klimatyzacji w Łodzi i okolicach – awaryjne naprawy urządzeń HVAC"
+                loading="lazy"
+              />
+            </div>
             <div class="service-content">
               <h3>Naprawy awaryjne</h3>
               <p>
@@ -273,10 +410,13 @@
         </div>
         <div class="text-center mb-5">
           <p>
-            W naszej hurtowni znajdziesz szeroki asortyment urządzeń i
-            akcesoriów niezbędnych do instalacji wentylacyjnych i
-            klimatyzacyjnych. Oferujemy produkty renomowanych producentów w
-            konkurencyjnych cenach.
+            Nasza hurtownia wentylacyjna i klimatyzacyjna w Łodzi oferuje
+            szeroki asortyment urządzeń i akcesoriów niezbędnych do montażu i
+            serwisu instalacji HVAC. W ofercie znajdziesz klimatyzatory split,
+            multi-split, kanałowe, wentylatory, kanały, kratki oraz
+            profesjonalne narzędzia montażowe. Zapewniamy doradztwo techniczne i
+            szybką realizację zamówień dla klientów z Łodzi i całego województwa
+            łódzkiego.
           </p>
           <a href="#contact" class="btn warehouse-btn"
             >Zapytaj o dostępność produktów</a
@@ -880,6 +1020,12 @@
         <div class="section-title">
           <h2>Opinie naszych klientów</h2>
         </div>
+        <p>
+          Od 15 lat świadczymy usługi HVAC w Łodzi i województwie łódzkim.
+          Zaufało nam już ponad 1000 klientów, którzy korzystają z naszego
+          serwisu klimatyzacji i wentylacji, montażu systemów rekuperacji oraz
+          zakupów w hurtowni wentylacyjnej.
+        </p>
         <div class="testimonials-container">
           <div class="testimonial">
             <div class="testimonial-content">
