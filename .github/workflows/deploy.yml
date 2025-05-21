@@ -1,0 +1,8 @@
+- name: Deploy to AZ.pl via FTP
+  uses: SamKirkland/FTP-Deploy-Action@v4
+  with:
+    server: ${{ secrets.FTP_HOST }}
+    username: ${{ secrets.FTP_USER }}
+    password: ${{ secrets.FTP_PASS }}
+    local-dir: ./dist
+    server-dir: /public_html/test
