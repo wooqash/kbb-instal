@@ -1,5 +1,5 @@
 on: push
-name: 🚀 Deploy website on push to az.pl via FTPS
+name: 🚀 Deploy website on push to az.pl via FTP
 jobs:
   web-deploy:
     name: 🎉 Deploy
@@ -20,7 +20,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          protocol: ftps
-          port: 990
           local-dir: ./dist/
           server-dir: /public_html/test/
