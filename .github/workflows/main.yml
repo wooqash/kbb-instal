@@ -22,5 +22,5 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps
           port: 990
-          local-dir: /dist/
+          local-dir: ./dist/
           server-dir: /public_html/test/
