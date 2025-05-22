@@ -1,5 +1,7 @@
-on: push
-name: 🚀 Deploy website on push to az.pl via FTP
+on: 
+  push:
+    branches: [main]
+name: 🚀 Deploy website to az.pl via FTP
 jobs:
   web-deploy:
     name: 🎉 Deploy

@@ -16,7 +16,9 @@ export default [
       "**/.vscode",
       "**/coverage",
       "**/dist",
+      "**/build",
       "**/node_modules",
+      "**/vite.config.ts",
     ],
   },
   {
