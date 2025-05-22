@@ -1,6 +1,10 @@
 .history
 .husky
 .vscode
+.git
+.github
 coverage
 dist
+build
+public
 node_modules
