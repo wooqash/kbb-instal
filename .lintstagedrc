@@ -1,4 +1,3 @@
 {
-  "./**/*.{ts,html,json}": "npm run format:fix",
-  "./**/*.{css,scss}": "npm run format:fix"
+  "./**/*.{ts,tsx,js,jsx,css}": "npm run lint & npm run format"
 }
