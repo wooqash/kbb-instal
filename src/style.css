@@ -95,7 +95,6 @@ iframe {
 }
 
 .btn:hover {
-  /* background-color: #1a8e0d; */
   background-color: var(--primary-color-hover);
 }
 

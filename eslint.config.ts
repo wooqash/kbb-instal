@@ -79,9 +79,6 @@ export default tseslint.config(
       css,
     },
     language: "css/css",
-    // languageOptions: {
-    //   tolerant: true,
-    // },
     rules: {
       "no-irregular-whitespace": "off",
     },
