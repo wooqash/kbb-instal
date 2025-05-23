@@ -305,7 +305,6 @@ nav a.hover-underline.active::after {
     var(--linear-gradient-color-1) 100%
   );
   background-clip: text;
-  background-clip: text;
   background-size: 200%;
   font-size: clamp(1.5rem, 1.2895rem + 1.0526vw, 3rem);
   font-weight: 800;

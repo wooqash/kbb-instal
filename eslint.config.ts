@@ -1,40 +1,90 @@
+// eslint.config.js
 import eslint from "@eslint/js";
-import type { Linter } from "eslint";
-import eslintConfigPrettier from "eslint-config-prettier";
-import prettier from "eslint-plugin-prettier";
-import globals from "globals";
 import tseslint from "typescript-eslint";
+import stylistic from "@stylistic/eslint-plugin";
+import stylelintPlugin from "eslint-plugin-stylelint";
+import prettier from "eslint-plugin-prettier/recommended";
+import globals from "globals";
 
-export default [
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  eslintConfigPrettier,
+export default tseslint.config(
   {
     ignores: [
-      "**/.history",
-      "**/.husky",
-      "**/.vscode",
-      "**/coverage",
-      "**/dist",
-      "**/build",
-      "**/node_modules",
-      "**/vite.config.ts",
+      "dist/",
+      "node_modules/",
+      "**/*.d.ts",
+      "coverage/",
+      "test/",
+      ".history/",
+      ".husky/",
+      ".vscode",
+      "build/",
+      "*.config.*",
     ],
   },
+
+  // Bazowe konfiguracje
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  prettier,
+
+  // Konfiguracja dla TypeScript
   {
+    files: ["**/*.ts", "**/*.tsx"],
     plugins: {
-      typescriptEslint: tseslint.plugin,
-      prettier,
+      "@typescript-eslint": tseslint.plugin,
+      "@stylistic": stylistic,
+    },
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@stylistic/indent": ["error", 2],
+      "@stylistic/quotes": ["error", "double", { avoidEscape: true }],
+    },
+  },
+
+  // Konfiguracja dla JavaScript
+  {
+    files: ["**/*.js", "**/*.jsx"],
+    plugins: {
+      "@stylistic": stylistic,
     },
     languageOptions: {
       globals: {
         ...globals.browser,
         ...globals.node,
       },
-      parser: tseslint.parser,
     },
     rules: {
-      "prettier/prettier": "error",
+      "no-undef": "error",
+      "no-console": "warn",
+      "@stylistic/semi": ["error", "never"],
     },
   },
-] satisfies Linter.Config[];
+
+  // Konfiguracja dla CSS
+  {
+    files: ["**/*.css"],
+    plugins: {
+      stylelint: stylelintPlugin,
+    },
+    rules: {
+      //   'stylelint/selector-class-pattern': [
+      //     'error',
+      //     {
+      //       pattern: '^[a-z][a-zA-Z0-9]*$',
+      //       message: 'Nazwy klas powinny używać camelCase'
+      //     }
+      //   ]
+    },
+  }
+);
