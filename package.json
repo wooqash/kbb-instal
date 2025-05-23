@@ -28,6 +28,7 @@
     "uninstall-husky": "npm uninstall husky --no-save && git config --unset core.hooksPath && npx rimraf .husky"
   },
   "devDependencies": {
+    "@eslint/css": "^0.8.1",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.13.5",

@@ -5,6 +5,7 @@ import stylistic from "@stylistic/eslint-plugin";
 import stylelintPlugin from "eslint-plugin-stylelint";
 import prettier from "eslint-plugin-prettier/recommended";
 import globals from "globals";
+import css from "@eslint/css";
 
 export default tseslint.config(
   {
@@ -75,16 +76,14 @@ export default tseslint.config(
   {
     files: ["**/*.css"],
     plugins: {
-      stylelint: stylelintPlugin,
+      css,
     },
+    language: "css/css",
+    // languageOptions: {
+    //   tolerant: true,
+    // },
     rules: {
-      //   'stylelint/selector-class-pattern': [
-      //     'error',
-      //     {
-      //       pattern: '^[a-z][a-zA-Z0-9]*$',
-      //       message: 'Nazwy klas powinny używać camelCase'
-      //     }
-      //   ]
+      "no-irregular-whitespace": "off",
     },
   }
 );
