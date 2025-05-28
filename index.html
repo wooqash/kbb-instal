@@ -64,23 +64,39 @@
     <header id="header">
       <div class="container header-container">
         <div class="logo">
-          <img
-            src="./public/kbb-logo-alt.svg"
-            alt="Logotyp KBB Instal kierujący do strony głównej"
-          />
+          <a class="nav-link" href="#hero" title="Idź do strony głównej">
+            <img
+              src="./public/kbb-logo-alt.svg"
+              alt="Logotyp KBB Instal kierujący do strony głównej"
+            />
+          </a>
         </div>
         <button class="mobile-menu-btn">
           <i class="fas fa-bars"></i>
         </button>
         <nav id="nav">
           <ul>
-            <li><a class="hover-underline" href="#hero">Strona główna</a></li>
-            <li><a class="hover-underline" href="#about">O nas</a></li>
-            <li><a class="hover-underline" href="#services">Usługi</a></li>
-            <li><a class="hover-underline" href="#wholesale">Hurtownia</a></li>
-            <li><a class="hover-underline" href="#portfolio">Realizacje</a></li>
-            <li><a class="hover-underline" href="#testimonials">Opinie</a></li>
-            <li><a class="hover-underline" href="#contact">Kontakt</a></li>
+            <li>
+              <a class="nav-link hover-underline" href="#hero">Strona główna</a>
+            </li>
+            <li><a class="nav-link hover-underline" href="#about">O nas</a></li>
+            <li>
+              <a class="nav-link hover-underline" href="#services">Usługi</a>
+            </li>
+            <li>
+              <a class="nav-link hover-underline" href="#wholesale"
+                >Hurtownia</a
+              >
+            </li>
+            <li>
+              <a class="nav-link hover-underline" href="#portfolio"
+                >Realizacje</a
+              >
+            </li>
+            <!-- <li><a class="nav-link hover-underline" href="#testimonials">Opinie</a></li> -->
+            <li>
+              <a class="nav-link hover-underline" href="#contact">Kontakt</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -110,7 +126,7 @@
               type="image/webp"
             />
             <img
-              src="./public/hero/hero-1-800.webp"
+              src="./public/hero/hero-1-480.webp"
               alt="Instalacja wentylacji w nowoczesnym budynku komercyjnym – montaż wentylacji Łódź i okolice"
               width="800"
               height="534"
@@ -261,10 +277,19 @@
             </p>
           </div>
           <div class="about-image">
-            <img
+            <!-- <img
               src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
               alt="Zespół KBB Instal"
               loading="lazy"
+            /> -->
+            <img
+              src="./public/firma-i-ludzie.webp"
+              alt="Cztery ręce skrzyżowane ze sobą"
+              width="565"
+              height="854"
+              class=""
+              loading="lazy"
+              fetchpriority="low"
             />
           </div>
         </div>
@@ -592,394 +617,635 @@
         </div>
         <div class="portfolio-filter">
           <button class="filter-btn active" data-filter="all">Wszystkie</button>
-          <button class="filter-btn" data-filter="abb">ABB</button>
-          <button class="filter-btn" data-filter="nowa-szkola">
-            Fabryka "Nowa szkoła"
+          <button class="filter-btn" data-filter="bud-uzytecznosci-pub">
+            Bud. użyteczności pub
           </button>
-          <button class="filter-btn" data-filter="k-flex">K-Flex</button>
-          <button class="filter-btn" data-filter="manufaktura">
-            Manufaktura
+          <button class="filter-btn" data-filter="hurtownia">Hurtownia</button>
+          <button class="filter-btn" data-filter="magazyny-fabryki">
+            Magazyny i fabryki
           </button>
-          <button class="filter-btn" data-filter="rossmann">Rossmann</button>
-          <button class="filter-btn" data-filter="teatr-studyjny">
-            Teatr studyjny
-          </button>
-          <button class="filter-btn" data-filter="uml">UMŁ</button>
-          <button class="filter-btn" data-filter="wytwornia">Wytwórnia</button>
         </div>
         <div class="portfolio-grid">
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-1.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-12.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-2.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-6.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-7.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-8.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-9.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-10.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-3.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-4.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="abb">
-            <img
-              src="./projects/abb/abb-aleksandrow-lodzki-5.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>ABB Aleksandrów Łódzki</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="nowa-szkola">
-            <img
-              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-1.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Fabryka "Nowa szkoła"</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="nowa-szkola">
-            <img
-              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-2.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Fabryka "Nowa szkoła"</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="nowa-szkola">
-            <img
-              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-3.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Fabryka "Nowa szkoła"</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="k-flex">
-            <img
-              src="./projects/k-flex/k-flex-1.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>K-Flex</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="k-flex">
-            <img
-              src="./projects/k-flex/k-flex-2.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>K-Flex</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="k-flex">
-            <img
-              src="./projects/k-flex/k-flex-3.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>K-Flex</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="k-flex">
-            <img
-              src="./projects/k-flex/k-flex-4.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>K-Flex</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-1.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-2.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-3.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-4.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-5.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-6.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="manufaktura">
-            <img
-              src="./projects/manufaktura/manufaktura-7.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Manufaktura</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="rossmann">
-            <img
-              src="./projects/rossmann/rossmann-1.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Rossmann</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="rossmann">
-            <img
-              src="./projects/rossmann/rossmann-2.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Rossmann</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="rossmann">
-            <img
-              src="./projects/rossmann/rossmann-3.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Rossmann</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="rossmann">
-            <img
-              src="./projects/rossmann/rossmann-4.webp"
-              alt="Projekt 1"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h3>Rossmann</h3>
-              <p>Instalacja klimatyzacji</p>
-            </div>
-          </div>
-          <div class="portfolio-item" data-category="teatr-studyjny">
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
             <img
               src="./projects/teatr-studyjny/teatr-studyjny-1.webp"
-              alt="Projekt 1"
+              alt="Montaż instalacji wentylacji w akustycznej sali prób Teatru Studyjnego w Łodzi – widoczne nowe kanały wentylacyjne pod sufitem, przewody elektryczne oraz elementy izolacji akustycznej, co poprawia komfort i jakość powietrza w przestrzeni teatralnej."
+              width="800"
+              height="450"
               loading="lazy"
             />
             <div class="portfolio-overlay">
               <h3>Teatr studyjny</h3>
-              <p>Instalacja klimatyzacji</p>
+              <p>Montaż instalacji wentylacji w akustycznej sali prób</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="teatr-studyjny">
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
             <img
               src="./projects/teatr-studyjny/teatr-studyjny-2.webp"
-              alt="Projekt 1"
+              alt="Nowoczesna instalacja wentylacyjna w sali prób akustycznych Teatru Studyjnego w Łodzi – metalowe kanały wentylacyjne prowadzone pod sufitem, przygotowania do montażu oświetlenia oraz izolacja akustyczna, wspierające odpowiednie warunki dla prób teatralnych."
+              width="800"
+              height="450"
               loading="lazy"
             />
             <div class="portfolio-overlay">
               <h3>Teatr studyjny</h3>
-              <p>Instalacja klimatyzacji</p>
+              <p>Montaż instalacji wentylacji w akustycznej sali prób</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="uml">
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
             <img
-              src="./projects/uml/uml-1.webp"
-              alt="Projekt 1"
+              src="./projects/inne/uml-1.webp"
+              alt="Montaż instalacji klimatyzacji w Urzędzie Miasta Łodzi – samochód serwisowy z wysięgnikiem i pracownikami montującymi urządzenia klimatyzacyjne na elewacji zabytkowego budynku przy ulicy Piotrkowskiej, teren zabezpieczony taśmą ostrzegawczą."
+              width="800"
+              height="600"
               loading="lazy"
             />
             <div class="portfolio-overlay">
               <h3>Urząd Miasta Łodzi</h3>
-              <p>Instalacja klimatyzacji</p>
+              <p>Montaż instalacji klimatyzacji</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="wytwornia">
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/inne/przedszkole-wisniowa-g.webp"
+              alt="Montaż instalacji wentylacji i klimatyzacji w przedszkolu w Wiśniowej Górze koło Łodzi – dźwig podnosi centralę wentylacyjną na dach nowoczesnego budynku przedszkola, widoczne kolorowe filary oraz zabezpieczony teren prac montażowych"
+              width="400"
+              height="534"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Przedszkole Wiśniowa Góra k. Łodzi</h3>
+              <p>Montaż instalacji wentylacji i klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/inne/biurowiec-media-hub.webp"
+              alt="Montaż instalacji wentylacji i klimatyzacji w nowoczesnym biurowcu Media HUB – widoczne metalowe kanały wentylacyjne i przewody klimatyzacyjne pod sufitem otwartej przestrzeni biurowej, przygotowywanej do użytkowania."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Biurowiec Media Hub</h3>
+              <p>Instalacja wentylacji i klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/inne/biurowiec-fuzja-1.webp"
+              alt="Montaż instalacji wentylacji i klimatyzacji VRF w biurowcu Fuzja – widoczne metalowe kanały wentylacyjne oraz jednostki klimatyzacyjne przygotowywane do montażu pod stropem w nowoczesnej przestrzeni biurowej."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Biurowiec Fuzja</h3>
+              <p>Instalacja wentylacji VRF i klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/inne/biurowiec-fuzja-2.webp"
+              alt="Instalacja systeu wentylacji i klimatyzacji VRF w biurowcu Fuzja – przewody klimatyzacyjne, kanały wentylacyjne oraz elementy instalacji rozprowadzone pod sufitem podwieszanym w jasnym, przeszklonym biurze."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Biurowiec Fuzja</h3>
+              <p>Instalacja wentylacji VRF i klimatyzacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
             <img
               src="./projects/wytwornia/wytwornia-1.webp"
-              alt="Projekt 1"
+              alt="Montaż instalacji wentylacji w halach widowiskowych łódzkiej Wytwórni – pracownicy obsługują podnośnik teleskopowy przy ścianie budynku, przygotowując elementy systemu wentylacyjnego do instalacji na zewnątrz obiektu."
+              width="800"
+              height="600"
               loading="lazy"
             />
             <div class="portfolio-overlay">
               <h3>Wytwórnia</h3>
-              <p>Instalacja klimatyzacji</p>
+              <p>Montaż instalacji wentylacji hal widowiskowych</p>
             </div>
           </div>
-          <div class="portfolio-item" data-category="wytwornia">
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
             <img
               src="./projects/wytwornia/wytwornia-2.webp"
-              alt="Projekt 1"
+              alt="Nowoczesna instalacja wentylacyjna na dachu hali widowiskowej Wytwórni w Łodzi – widoczne prostokątne kanały wentylacyjne oraz centrale wentylacyjne, stanowiące część systemu zapewniającego odpowiednią wentylację podczas wydarzeń."
+              width="800"
+              height="600"
               loading="lazy"
             />
             <div class="portfolio-overlay">
               <h3>Wytwórnia</h3>
-              <p>Instalacja klimatyzacji</p>
+              <p>Montaż instalacji wentylacji hal widowiskowych</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/wytwornia/wytwornia-3.webp"
+              alt="System wentylacji na dachu łódzkiej Wytwórni – zamontowane kanały i centrale wentylacyjne, które poprawiają jakość powietrza i komfort w halach widowiskowych podczas koncertów i imprez."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Wytwórnia</h3>
+              <p>Montaż instalacji wentylacji hal widowiskowych</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/manufaktura/manufaktura-1.webp"
+              alt="Modernizacja instalacji wentylacji w łódzkiej Manufakturze – montaż dużego przewodu wentylacyjnego przy użyciu dźwigu przed sklepem GO Sport. Widoczne elementy nowej wentylacji, pracownicy oraz zabezpieczony teren budowy"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Modernizacja instalacji wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/manufaktura/manufaktura-2.webp"
+              alt="Nowoczesna instalacja wentylacyjna na dachu Manufaktury w Łodzi – widoczne metalowe kanały wentylacyjne oraz centrale wentylacyjne, będące częścią modernizacji systemu wentylacji w centrum handlowym"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Modernizacja instalacji wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/manufaktura/manufaktura-3.webp"
+              alt="Przebudowa wentylacji na dachu Manufaktury w Łodzi – nowe, prostokątne kanały wentylacyjne z blachy prowadzone wzdłuż instalacji technicznych, poprawiających wydajność systemu wentylacyjnego budynku"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Modernizacja instalacji wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/manufaktura/manufaktura-4.webp"
+              alt="Modernizacja systemu wentylacji w łódzkiej Manufakturze – fragment dachu z nowymi kanałami wentylacyjnymi, schodkami serwisowymi oraz centralami wentylacyjnymi, ilustrujący zaawansowane prace instalacyjne"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Modernizacja instalacji wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="bud-uzytecznosci-pub">
+            <img
+              src="./projects/manufaktura/manufaktura-5.webp"
+              alt="Nowoczesna instalacja wentylacyjna na dachu Manufaktury w Łodzi – widoczne centrale wentylacyjne, metalowe kanały oraz schodki serwisowe jako elementy modernizacji systemu wentylacji w centrum handlowym"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Manufaktura</h3>
+              <p>Modernizacja instalacji wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="hurtownia">
+            <img
+              src="./projects/hurtownia/hurtownia-1.webp"
+              alt="Produkty wentylacyjne w hurtowni – widoczne izolacje z wełny mineralnej ROCKWOOL oraz elementy systemów wentylacji, takie jak kanały prostokątne, czerpnie, wyrzutnie i kolana wentylacyjne, przygotowane do montażu w instalacjach HVAC."
+              width="400"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Hurtownia</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="hurtownia">
+            <img
+              src="./projects/hurtownia/hurtownia-2.webp"
+              alt="Asortyment hurtowni wentylacyjnej – izolacje z wełny mineralnej ROCKWOOL, kratki wentylacyjne, wyrzutnie dachowe oraz elementy prostokątne i okrągłe systemów wentylacji, przeznaczone do profesjonalnych instalacji wentylacyjnych i klimatyzacyjnych."
+              width="800"
+              height="533"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Hurtownia</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="hurtownia">
+            <img
+              src="./projects/hurtownia/hurtownia-3.webp"
+              alt="Stalowe kanały wentylacyjne w hurtowni – ułożone w stosy okrągłe rury wentylacyjne z ocynkowanej blachy, wykorzystywane do budowy nowoczesnych systemów wentylacji i klimatyzacji w budynkach przemysłowych i komercyjnych."
+              width="800"
+              height="533"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Hurtownia</h3>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-1.webp"
+              alt="Montaż instalacji wentylacji w hali produkcyjnej ABB w Aleksandrowie Łódzkim – pracownicy w kamizelkach i kaskach instalują prostokątne kanały wentylacyjne pod sufitem nowoczesnego zakładu przemysłowego"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-2.webp"
+              alt="System wentylacji przemysłowej ABB w Aleksandrowie Łódzkim – widoczne duże, stalowe kanały wentylacyjne oraz elementy konstrukcyjne hali, zapewniające efektywną wymianę powietrza w obiekcie produkcyjnym"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-6.webp"
+              alt="System wentylacji przemysłowej na dachu ABB w Aleksandrowie Łódzkim – rozprowadzone prostokątne kanały wentylacyjne oraz czerpnie powietrza, zapewniające efektywną wentylację w zakładzie produkcyjnym ABB"
+              width="800"
+              height="447"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-7.webp"
+              alt="Nowoczesna instalacja wentylacji na dachu hali produkcyjnej ABB w Aleksandrowie Łódzkim – duże, stalowe kanały wentylacyjne z czerpniami i wyrzutniami powietrza, poprawiające jakość powietrza w obiekcie przemysłowym"
+              width="800"
+              height="447"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-8.webp"
+              alt="Kanały wentylacyjne na dachu zakładu ABB w Aleksandrowie Łódzkim – prostokątne przewody wentylacyjne i czerpnie powietrza zamontowane na dachu, kluczowe dla sprawnej wentylacji hali przemysłowej ABB"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-9.webp"
+              alt="Instalacja wentylacji w hali produkcyjnej ABB w Aleksandrowie Łódzkim – widoczne prostokątne kanały wentylacyjne z zamontowanymi nawiewnikami i elementami automatyki pod sufitem nowoczesnego zakładu przemysłowego"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-10.webp"
+              alt="Montaż instalacji wentylacyjnej w ABB Aleksandrów Łódzki – dźwig podnosi duży element systemu wentylacji na dach budynku przemysłowego ABB, teren zabezpieczony taśmą ostrzegawczą"
+              width="400"
+              height="711"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-3.webp"
+              alt="Montaż wentylacji w ABB Aleksandrów Łódzki – dźwig montażowy podnosi elementy instalacji wentylacyjnej na dach nowoczesnego budynku przemysłowego, teren zabezpieczony taśmą ostrzegawczą"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-4.webp"
+              alt="Dźwig podczas instalacji wentylacji na dachu zakładu ABB w Aleksandrowie Łódzkim – prace montażowe przy użyciu wysokiego żurawia, umożliwiające instalację dużych elementów systemu wentylacyjnego w obiekcie przemysłowym"
+              width="400"
+              height="710"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/abb/abb-aleksandrow-lodzki-5.webp"
+              alt="Montaż instalacji wentylacji w ABB Aleksandrów Łódzki – dźwig montażowy podnosi elementy systemu wentylacyjnego na dach nowoczesnego budynku przemysłowego ABB, widoczny teren fabryki oraz elewacja z dużymi oknami"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>ABB Aleksandrów Łódzki</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-1.webp"
+              alt="Instalacja wentylacji w fabryce mebli Nowa Szkoła – widoczne duże, stalowe kanały wentylacyjne zamontowane pod sufitem przestronnej hali produkcyjnej, zapewniające skuteczną wymianę powietrza w zakładzie meblarskim."
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka mebli "Nowa szkoła"</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-2.webp"
+              alt="Nowoczesny system wentylacji w hali produkcyjnej fabryki mebli Nowa Szkoła – metalowe przewody wentylacyjne prowadzone pod dachem, gwarantujące odpowiednią wentylację i komfort pracy w obiekcie przemysłowym."
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka mebli "Nowa szkoła"</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-3.webp"
+              alt="Kanały wentylacyjne w fabryce mebli Nowa Szkoła – instalacja okrągłych przewodów wentylacyjnych pod sufitem hali, umożliwiająca sprawną wentylację i poprawę jakości powietrza w środowisku produkcyjnym."
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka mebli "Nowa szkoła"</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/fabryka-nowa-szkola/fabryka-nowa-szkola-4.webp"
+              alt="Montaż instalacji wentylacyjnej w fabryce mebli Nowa Szkoła – pracownicy korzystają z podnośnika nożycowego podczas instalacji dużych kanałów wentylacyjnych, co podnosi efektywność wentylacji w hali produkcyjnej."
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="portfolio-overlay">
+              <h3>Fabryka mebli "Nowa szkoła"</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/rossmann/rossmann-1.webp"
+              alt="Instalacja wentylacji na dachu centrali Rossmann w Łodzi – widoczne duże, prostokątne kanały wentylacyjne z blachy ocynkowanej oraz jednostki wentylacyjne, zapewniające efektywną wentylację w centrum logistycznym Rossmann"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/rossmann/rossmann-2.webp"
+              alt="Nowoczesny system wentylacji na dachu centrali Rossmann w Łodzi – metalowe kanały wentylacyjne prowadzone wzdłuż dachu, z widocznymi centralami wentylacyjnymi, poprawiającymi jakość powietrza w obiekcie magazynowym"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/rossmann/rossmann-3.webp"
+              alt="Kanały wentylacyjne na dachu centrali Rossmann w Łodzi – rozbudowana instalacja wentylacji przemysłowej, obejmująca prostokątne przewody wentylacyjne oraz czerpnie i wyrzutnie powietrza, kluczowe dla prawidłowej wentylacji dużych powierzchni magazynowych"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/rossmann/rossmann-4.webp"
+              alt="Montaż instalacji wentylacji na dachu centrali Rossmann w Łodzi – pracownik w kamizelce odblaskowej nadzoruje nowoczesny system kanałów wentylacyjnych, który zapewnia optymalną wymianę powietrza w centrum dystrybucyjnym Rossmann"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <h3>Rossmann</h3>
+              <p>Instalacja wentylacji</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/cyrkulacja-goracego-powietrza-linii-technologicznej-1.webp"
+              alt="System wentylacji przemysłowej w hali produkcyjnej – rząd izolowanych kanałów wentylacyjnych nad linią technologiczną, zapewniających cyrkulację gorącego powietrza w zakładzie produkcyjnym."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Cyrkulacja gorącego powietrza linii technologicznej</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/cyrkulacja-goracego-powietrza-linii-technologicznej-2.webp"
+              alt="Instalacja wentylacji nad linią technologiczną w hali przemysłowej – widoczne liczne kanały wentylacyjne oraz platforma serwisowa z barierkami, elementy systemu wentylacji wspierające efektywną wymianę powietrza w obiekcie przemysłowym."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Cyrkulacja gorącego powietrza linii technologicznej</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/instalacja-wentylacji-przemyslowej-1.webp"
+              alt="Montaż instalacji wentylacji przemysłowej – pracownik wykonuje prace montażowe przy dużym kanale wentylacyjnym pod sufitem hali produkcyjnej, co poprawia jakość powietrza w zakładzie przemysłowym."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Instalacja wentylacji przemysłowej</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/instalacja-wentylacji-przemyslowej-2.webp"
+              alt="Kanały wentylacyjne zamontowane pod sufitami hali produkcyjnej – nowoczesna instalacja wentylacji przemysłowej w zakładzie produkcyjnym, widoczne prostokątne przewody wentylacyjne oraz suwnica transportowa."
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Instalacja wentylacji przemysłowej</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/instalacja-wentylacji-przemyslowej-3.webp"
+              alt="Montaż instalacji wentylacji przemysłowej w hali produkcyjnej – pracownik na podnośniku koszowym instaluje kanały wentylacyjne pod sufitem, co zapewnia efektywną wentylację i bezpieczeństwo w nowoczesnym zakładzie przemysłowym"
+              width="400"
+              height="711"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Instalacja wentylacji przemysłowej</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/komora-pracy-z-dedykowana-wentylacja-1.webp"
+              alt="Komora pracy z dedykowaną wentylacją przemysłową – stalowa konstrukcja z zamontowanymi prostokątnymi kanałami wentylacyjnymi na górze, przeznaczona do odprowadzania zanieczyszczeń i poprawy jakości powietrza w procesach produkcyjnych"
+              width="800"
+              height="374"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Komora pracy z dedykowaną wentylacją</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/labolatorium-przemyslowe-1.webp"
+              alt="Laboratorium przemysłowe z systemem wentylacji – widoczne okrągłe kanały wentylacyjne oraz duży okap nad urządzeniem technologicznym, zapewniające skuteczną wentylację i bezpieczeństwo pracy w pomieszczeniu laboratoryjnym"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Labolatorium przemysłowe</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/nawiew-odzyskanego-goracego-powietrza-1.webp"
+              alt="Nawiew odzyskanego gorącego powietrza w hali przemysłowej – prostokątne kanały wentylacyjne z zamontowanymi nawiewnikami pod sufitem, wspierające efektywną dystrybucję ciepłego powietrza i poprawę efektywności energetycznej w zakładzie produkcyjnym"
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Nawiew odzyskanego gorącego powietrza</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/nawiew-odzyskanego-goracego-powietrza-2.webp"
+              alt="System wentylacji przemysłowej w hali produkcyjnej – pracownicy w kamizelkach i kaskach montują prostokątne kanały wentylacyjne z nawiewnikami pod sufitem, co zapewnia skuteczną wentylację i poprawia jakość powietrza w zakładzie produkcyjnym."
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Nawiew odzyskanego gorącego powietrza</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/odzysk-ciepla-ze-sprezarkowni-1.webp"
+              alt="Instalacja odzysku ciepła ze sprężarkowni – metalowe kanały wentylacyjne i urządzenia techniczne zabezpieczone siatką, umożliwiające efektywne wykorzystanie ciepła odpadowego w systemie wentylacji przemysłowej."
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Odzysk ciepła ze sprężarkowni</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/separator-oparow-zywicy-1.webp"
+              alt="Separator oparów żywicy w hali przemysłowej – nowoczesny system wentylacji z okrągłymi kanałami i centralą wentylacyjną zamontowany nad maszyną produkcyjną, poprawiający bezpieczeństwo i komfort pracy w przemyśle."
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Separator oparów żywicy</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/separator-oparow-zywicy-2.webp"
+              alt="Izolowany kanał wentylacyjny przemysłowy – zbliżenie na okrągły przewód wentylacyjny z widoczną izolacją termiczną, stosowany w systemach odzysku gorącego powietrza w zakładach produkcyjnych."
+              width="800"
+              height="450"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Separator oparów żywicy</p>
+            </div>
+          </div>
+          <div class="portfolio-item" data-category="magazyny-fabryki">
+            <img
+              src="./projects/technologia/wentylacja-komory-suszarni.webp"
+              alt="Montaż instalacji wentylacji przemysłowej w hali produkcyjnej – pracownicy w kamizelkach i kaskach instalują izolowane kanały wentylacyjne na komorze suszarni, co zapewnia skuteczną wentylację i poprawia jakość powietrza w zakładzie produkcyjnym. W tle widoczne butle z helem oraz elementy infrastruktury przemysłowej"
+              width="800"
+              height="600"
+              loading="lazy"
+            />
+            <div class="portfolio-overlay">
+              <p>Wentylacja komory suszarni</p>
             </div>
           </div>
         </div>
@@ -1015,7 +1281,7 @@
     </div>
 
     <!-- Opinie -->
-    <section id="testimonials">
+    <!-- <section id="testimonials">
       <div class="container">
         <div class="section-title">
           <h2>Opinie naszych klientów</h2>
@@ -1109,7 +1375,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Kontakt -->
     <section id="contact">

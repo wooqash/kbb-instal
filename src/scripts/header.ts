@@ -1,13 +1,16 @@
 export const initHeader = () => {
   const MOBILE = 768;
-  // const isMobile = false;
+  const isMobile = false;
+  let isScrolled = false;
+  let menuIsOpen = false;
   // Elementy DOM
+  const body = document.querySelector("body");
   const header = document.getElementById("header");
   const mobileMenuBtn: HTMLButtonElement | null =
     document.querySelector(".mobile-menu-btn");
   const nav = document.getElementById("nav");
   const navLinks: NodeListOf<HTMLAnchorElement> =
-    document.querySelectorAll("nav ul li a");
+    document.querySelectorAll(".nav-link");
 
   const checkIsMobile = () => {
     if (window.innerWidth < MOBILE) {
@@ -19,10 +22,12 @@ export const initHeader = () => {
 
   // Sticky Header
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 100 && !menuIsOpen) {
       header?.classList.add("scrolled");
+      isScrolled = true;
     } else {
       header?.classList.remove("scrolled");
+      isScrolled = false;
     }
   });
 
@@ -30,9 +35,9 @@ export const initHeader = () => {
     checkIsMobile();
   });
 
-  window.addEventListener("DOMContentLoaded", function () {
-    checkIsMobile();
-  });
+  // window.addEventListener("DOMContentLoaded", function () {
+  //   checkIsMobile();
+  // });
 
   // Mobile Menu Toggle
   mobileMenuBtn?.addEventListener("click", function () {
@@ -44,9 +49,19 @@ export const initHeader = () => {
       if (nav.classList.contains("active")) {
         icon?.classList.remove("fa-bars");
         icon?.classList.add("fa-times");
+        body?.classList.add("scroll-blocked");
+        menuIsOpen = true;
+        if (isScrolled) {
+          header?.classList.remove("scrolled");
+        }
       } else {
         icon?.classList.remove("fa-times");
         icon?.classList.add("fa-bars");
+        body?.classList.remove("scroll-blocked");
+        menuIsOpen = false;
+        if (window.scrollY > 100) {
+          header?.classList.add("scrolled");
+        }
       }
     }
   });
@@ -56,6 +71,8 @@ export const initHeader = () => {
     link.addEventListener("click", function () {
       if (nav) {
         nav.classList.remove("active");
+        body?.classList.remove("scroll-blocked");
+        menuIsOpen = false;
         const icon = mobileMenuBtn?.querySelector("i");
         if (icon) {
           icon.classList.remove("fa-times");
@@ -78,7 +95,6 @@ export const initHeader = () => {
         link.classList.add("active");
       }
 
-      // console.log(document.querySelectorAll('nav .active'))
       const targetId = this.getAttribute("href");
       if (targetId) {
         const targetSection: HTMLAnchorElement | null =
@@ -90,6 +106,7 @@ export const initHeader = () => {
             behavior: "smooth",
           });
         }
+        header?.classList.add("scrolled");
       }
     });
   });
