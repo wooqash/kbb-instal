@@ -4,6 +4,7 @@ import { initAnimation } from "./scripts/animations";
 import { initHeroSlider } from "./scripts/hero";
 import { initGallery } from "./scripts/gallery";
 import { protectInfo, copyrightDate } from "./scripts/protect-info";
+import { initScrollToTopBtn } from "./scripts/scrollTop";
 
 export { sum } from "./sum";
 
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initHeroSlider();
   initAnimation();
   initGallery();
+  initScrollToTopBtn();
   protectInfo();
   copyrightDate();
 

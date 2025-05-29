@@ -1097,6 +1097,47 @@ footer {
   text-decoration: none;
 }
 
+#scrollToTopBtn {
+  /* display: none; */
+  position: fixed;
+  right: 24px;
+  bottom: 32px;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition:
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+#scrollToTopBtn svg {
+  display: block;
+  margin: 0 auto;
+}
+#scrollToTopBtn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+#scrollToTopBtn.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+#scrollToTopBtn:hover,
+#scrollToTopBtn:focus-visible {
+  background-color: var(--secondary-color-hover);
+}
+
 /* RESPONSYWNOŚĆ */
 @media (max-width: 992px) {
   h1 {
