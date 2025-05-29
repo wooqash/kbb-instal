@@ -1,15 +1,13 @@
-// Elementy DOM
-const aboutSection = document.querySelector("#about");
-const aboutText = document.querySelector(".about-text");
-const aboutImage = document.querySelector(".about-image");
-const features = document.querySelectorAll(".feature");
-
 // Funkcja do animacji elementów przy scrollowaniu
 const animateAboutSection = function () {
+  const aboutSection = document.querySelector("#about");
+  const aboutText = document.querySelector(".about-text");
+  const aboutImage = document.querySelector(".about-image");
+  const features = document.querySelectorAll(".feature");
   const aboutPosition = aboutSection?.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
 
-  if (aboutPosition && aboutPosition < windowHeight - 100) {
+  if (aboutPosition && aboutPosition < windowHeight - 200) {
     // Animacja tekstu
     aboutText?.classList.add("animate-fade-in-left");
 
@@ -43,7 +41,7 @@ const animateOnScroll = function () {
     const elementPosition = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
 
-    if (elementPosition < windowHeight - 100) {
+    if (elementPosition < windowHeight - 200) {
       element.classList.add("fade-in");
     }
   });

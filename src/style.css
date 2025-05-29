@@ -1225,6 +1225,10 @@ footer {
     width: 100%;
   }
 
+  .btn[style*="none"] {
+    display: none;
+  }
+
   .brands {
     gap: 15px;
     grid-template-columns: repeat(2, 1fr);
