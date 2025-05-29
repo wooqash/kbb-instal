@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: "20.x"
       - name: Installing dependencies
-        run: npm ci
+        run: npm ci --force
       - name: Build
         run: npm run build
       - name: 📂 Sync files
