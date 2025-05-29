@@ -1,8 +1,6 @@
-const filterBtns: NodeListOf<HTMLButtonElement> =
-  document.querySelectorAll(".filter-btn");
 const portfolioItems: NodeListOf<HTMLDivElement> =
   document.querySelectorAll(".portfolio-item");
-// const loadMoreBtn = document.getElementById("load-more-btn");
+const loadMoreBtn = document.getElementById("load-more-btn");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById(
   "lightbox-image"
@@ -25,27 +23,52 @@ let currentImageIndex = 0;
 let currentCategory: string | null | undefined = "all";
 let filteredItems: HTMLDivElement[] = [];
 
-export const initGallery = () => {
-  // Portfolio Filter
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", function () {
-      // Usuń klasę active ze wszystkich przycisków
-      filterBtns.forEach(btn => btn.classList.remove("active"));
+// Dodaj zmienne globalne
+const initialShow = 8; // Początkowa liczba widocznych zdjęć
+const revealCount = 4; // Liczba zdjęć ładowanych przy każdym kliknięciu
+let currentShow = initialShow;
 
-      // Dodaj klasę active do klikniętego przycisku
-      this.classList.add("active");
-
-      const filter = this.getAttribute("data-filter");
-
-      portfolioItems.forEach(item => {
-        if (filter === "all" || item.getAttribute("data-category") === filter) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      });
-    });
+// Modyfikacja funkcji updateFilteredItems
+function updateFilteredItems() {
+  filteredItems = Array.from(portfolioItems).filter(item => {
+    const itemCategory = item.getAttribute("data-category");
+    return currentCategory === "all" || itemCategory === currentCategory;
   });
+
+  // Aktualizacja widocznych elementów
+  filteredItems.forEach((item, index) => {
+    item.style.display = index < currentShow ? "block" : "none";
+  });
+
+  // Aktualizuj całkowitą liczbę obrazów
+  if (totalImages) {
+    totalImages.textContent = filteredItems.length.toString();
+  }
+
+  // Aktualizacja przycisku "Załaduj więcej"
+  updateLoadMoreButton();
+}
+
+// Funkcja obsługująca przycisk "Załaduj więcej"
+function handleLoadMore() {
+  currentShow += revealCount;
+  updateFilteredItems();
+}
+
+// Funkcja aktualizująca stan przycisku
+function updateLoadMoreButton() {
+  const loadMoreBtn = document.getElementById("load-more-btn");
+  if (!loadMoreBtn) return;
+
+  if (currentShow >= filteredItems.length) {
+    loadMoreBtn.style.display = "none";
+  } else {
+    loadMoreBtn.style.display = "inline-block";
+  }
+}
+
+export const initGallery = () => {
+  loadMoreBtn?.addEventListener("click", handleLoadMore);
 
   //Ligthbox
   // Inicjalizacja filtrowanych elementów
@@ -88,7 +111,7 @@ export const initGallery = () => {
 
       // Aktualizuj kategorię i filtrowane elementy
       currentCategory = this.getAttribute("data-filter");
-      updateFilteredItems();
+      currentShow = initialShow;
 
       // Filtruj elementy portfolio
       portfolioItems.forEach(item => {
@@ -99,21 +122,10 @@ export const initGallery = () => {
           item.style.display = "none";
         }
       });
+
+      updateFilteredItems();
     });
   });
-
-  // Funkcja aktualizująca filtrowane elementy
-  function updateFilteredItems() {
-    filteredItems = Array.from(portfolioItems).filter(item => {
-      const itemCategory = item.getAttribute("data-category");
-      return currentCategory === "all" || itemCategory === currentCategory;
-    });
-
-    // Aktualizuj całkowitą liczbę obrazów
-    if (totalImages) {
-      totalImages.textContent = filteredItems.length.toString();
-    }
-  }
 
   // Funkcja otwierająca lightbox
   function openLightbox(
