@@ -13,6 +13,9 @@
       Kompleksowe rozwiązania wentylacyjne i klimatyzacyjne dla domu i przemysłu
       | KBB Instal
     </title>
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeHKlgrAAAAAHIE8N8qAUp-j7uLIG_geJXrmdbX"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
@@ -1424,38 +1427,47 @@
           </div>
           <div class="contact-form">
             <h3>Wyślij wiadomość</h3>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name">Imię i nazwisko</label>
+            <form id="contactForm" novalidate>
+              <div id="nameControl" class="form-group">
+                <label for="name">Imię i nazwisko*</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  placeholder="np. Jan Kowalski"
                   class="form-control"
                   required
                 />
+                <p class="error-msg" id="nameError"></p>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email*</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="np. jan.kowalski@email.com"
                   class="form-control"
                   required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                 />
+                <div class="error-msg" id="emailError"></div>
               </div>
               <div class="form-group">
-                <label for="phone">Telefon</label>
+                <label for="phone">Telefon*</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
+                  placeholder="np. +48 999-999-999"
                   class="form-control"
+                  required
+                  pattern="^[0-9+\- ]{15,17}$"
                 />
+                <div class="error-msg" id="phoneError"></div>
               </div>
               <div class="form-group">
-                <label for="subject">Temat</label>
+                <label for="subject">Temat*</label>
                 <select
                   id="subject"
                   name="subject"
@@ -1467,18 +1479,23 @@
                   <option value="warehouse">Hurtownia</option>
                   <option value="others">Inne</option>
                 </select>
+                <div class="error-msg" id="subjectError"></div>
               </div>
               <div class="form-group">
-                <label for="message">Wiadomość</label>
+                <label for="message">Wiadomość*</label>
                 <textarea
                   id="message"
                   name="message"
+                  placeholder="Napisz w czym możemy Ci pomóc"
                   class="form-control"
                   required
                 ></textarea>
+                <div class="error-msg" id="messageError"></div>
               </div>
+              <p class="asterix">* Pola wymagane</p>
               <button type="submit" class="btn">Wyślij wiadomość</button>
             </form>
+            <p id="formMessage" class="form-msg hidden"></p>
           </div>
         </div>
       </div>
