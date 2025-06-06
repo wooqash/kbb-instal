@@ -13,7 +13,7 @@ btn?.addEventListener("click", function () {
 });
 
 function toggleBtn() {
-  console.log(btn, isBelowHero());
+  // console.log(btn, isBelowHero());
   if (btn) {
     if (isBelowHero()) {
       btn.classList.add("show");

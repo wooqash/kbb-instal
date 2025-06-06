@@ -388,17 +388,20 @@ nav a.hover-underline.active::after {
 }
 
 .about-image {
-  border-radius: 10px;
-  box-shadow: 0 5px 15px var(--shadow-color-hover);
   flex: 1;
   min-width: 250px;
+  max-height: 599px;
   overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .about-image img {
-  height: auto;
+  height: 100%;
   max-width: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-color-hover);
 }
 
 .features {
@@ -1318,5 +1321,9 @@ footer {
   .brands {
     gap: 15px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-image {
+    justify-content: center;
   }
 }

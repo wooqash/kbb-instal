@@ -1,6 +1,6 @@
 export const initHeader = () => {
   const MOBILE = 768;
-  const isMobile = false;
+  // const isMobile = false;
   let isScrolled = false;
   let menuIsOpen = false;
   // Elementy DOM
