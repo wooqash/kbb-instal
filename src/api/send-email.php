@@ -1,8 +1,15 @@
 <?php
 header('Content-Type: application/json');
 
+require_once __DIR__ . '/vendor/autoload.php'; 
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Konfiguracja reCAPTCHA
-define('RECAPTCHA_SECRET', '6LeHKlgrAAAAAMkr7Z5i5LRyUevbvSBdigYaXP6c');
+$recaptchaSecret = $_ENV['RECAPTCHA_SECRET'];
 define('RECAPTCHA_URL', 'https://www.google.com/recaptcha/api/siteverify');
 
 $errors = [];
@@ -17,7 +24,7 @@ $message = filter_var($input['message'] ?? '', FILTER_SANITIZE_STRING);
 $recaptchaToken = $input['recaptchaToken'] ?? '';
 
 // Walidacja reCAPTCHA
-$recaptchaResponse = file_get_contents(RECAPTCHA_URL . '?secret=' . RECAPTCHA_SECRET . '&response=' . $recaptchaToken);
+$recaptchaResponse = file_get_contents(RECAPTCHA_URL . '?secret=' . $recaptchaSecret . '&response=' . $recaptchaToken);
 $recaptchaData = json_decode($recaptchaResponse);
 
 if (!$recaptchaData->success || $recaptchaData->score < 0.5) {

@@ -1,5 +1,4 @@
 import IMask from "imask";
-// import grecaptcha from "@types/grecaptcha";
 
 type FormControls = Record<
   string,
@@ -93,10 +92,11 @@ export const initContactForm = () => {
   }
 
   async function getRecaptchaToken() {
+    const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
     return new Promise(resolve => {
       grecaptcha.ready(() => {
         grecaptcha
-          .execute("6LeHKlgrAAAAAHIE8N8qAUp-j7uLIG_geJXrmdbX", {
+          .execute(recaptchaSiteKey, {
             action: "submit",
           })
           .then(token => resolve(token));
@@ -113,8 +113,8 @@ export const initContactForm = () => {
       });
 
       const result = await response.json();
-      console.log(data);
       // const result = { success: true, error: false };
+      console.log(data);
 
       if (result.success) {
         showMessage(messages.success, "success");
