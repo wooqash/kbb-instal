@@ -20,6 +20,8 @@ export default tseslint.config(
       ".vscode",
       "build/",
       "*.config.*",
+      ".git/",
+      "tmp/",
     ],
   },
 

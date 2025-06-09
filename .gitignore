@@ -27,3 +27,5 @@ coverage
 *.sw?
 .env
 /vendor
+.git
+tmp
