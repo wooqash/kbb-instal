@@ -105,7 +105,6 @@ export const initContactForm = () => {
   }
 
   async function submitForm(data: FormData) {
-    console.log(data);
     try {
       const response = await fetch("../api/send-email.php", {
         method: "POST",
@@ -114,8 +113,6 @@ export const initContactForm = () => {
       });
 
       const result = await response.json();
-      // const result = { success: true, error: false };
-      // console.log(data);
 
       if (result.success) {
         showMessage(messages.success, "success");
@@ -127,8 +124,8 @@ export const initContactForm = () => {
         );
       }
     } catch (error) {
-      console.log(error);
       showMessage(messages.serverError, "error");
+      console.error(error);
     }
   }
 

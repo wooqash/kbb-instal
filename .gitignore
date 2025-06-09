@@ -26,6 +26,5 @@ coverage
 *.sln
 *.sw?
 .env
-/vendor
 .git
 tmp
