@@ -2,7 +2,7 @@
 // phpinfo();
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
@@ -53,10 +53,25 @@ $headers = "From: " . $email . "\r\n";
 $headers .= "Reply-To: " . $email . "\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-$emailBody = "Imię i nazwisko: $name\n";
+if ($subject) {
+    switch ($subject) {
+    case "services":
+        $subject = "usług";
+        break;
+    case "warehouse":
+        $subject = "hurtowni";
+        break;
+    case "others":
+        $subject = "innego";
+        break;
+}
+}
+
+$subject = "Zapytanie dotyczy tematu - " . $subject;
+$emailBody = "Wiadomość:\n$message";
+$emailBody .= "Imię i nazwisko: $name\n";
 $emailBody .= "Email: $email\n";
 $emailBody .= "Telefon: $phone\n\n";
-$emailBody .= "Wiadomość:\n$message";
 
 if (function_exists('mail')) {
     if (mail($to, $subject, $emailBody, $headers)) {
