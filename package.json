@@ -62,7 +62,6 @@
     "vitest": "^3.0.7"
   },
   "dependencies": {
-    "@types/grecaptcha": "^3.0.9",
     "imask": "^7.6.1"
   }
 }

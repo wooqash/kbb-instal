@@ -94,8 +94,8 @@ export const initContactForm = () => {
   async function getRecaptchaToken() {
     const recaptchaSiteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
     return new Promise(resolve => {
-      grecaptcha.ready(() => {
-        grecaptcha
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
           .execute(recaptchaSiteKey, {
             action: "submit",
           })
