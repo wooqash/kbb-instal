@@ -1,7 +1,8 @@
 <?php
+// phpinfo();
 header('Content-Type: application/json');
 
-require_once __DIR__ . '/vendor/autoload.php'; 
+require_once __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
@@ -57,9 +58,13 @@ $emailBody .= "Email: $email\n";
 $emailBody .= "Telefon: $phone\n\n";
 $emailBody .= "Wiadomość:\n$message";
 
-if (mail($to, $subject, $emailBody, $headers)) {
-    echo json_encode(['success' => true]);
+if (function_exists('mail')) {
+    if (mail($to, $subject, $emailBody, $headers)) {
+        echo json_encode(['success' => true]);
+    } else {
+        http_response_code(500);
+        echo json_encode(['success' => false, 'error' => 'Błąd podczas wysyłania wiadomości']);
+    }
 } else {
-    http_response_code(500);
-    echo json_encode(['success' => false, 'error' => 'Błąd podczas wysyłania wiadomości']);
+    echo json_encode(['success' => false, 'error' => 'Funkcja mail() nie jest dostępna.']);
 }
