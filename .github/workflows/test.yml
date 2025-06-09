@@ -16,6 +16,13 @@ jobs:
         run: npm ci --force
       - name: Build
         run: npm run build
+        env:
+          VITE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_RECAPTCHA_SITE_KEY }}
+      - name: Replace placeholders
+        run: |
+          sed -i 's/%VITE_RECAPTCHA_SITE_KEY%/$VITE_RECAPTCHA_SITE_KEY/g' dist/index.html
+        env:
+          VITE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_RECAPTCHA_SITE_KEY }}
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
