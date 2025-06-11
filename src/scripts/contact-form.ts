@@ -23,6 +23,9 @@ const messages = {
 
 export const initContactForm = () => {
   const form: HTMLFormElement | null = document.querySelector("#contactForm");
+  const submitBtn: HTMLButtonElement | null = document.querySelector(
+    "button[type=submit]"
+  );
   const formMessage: HTMLElement | null =
     document.getElementById("formMessage");
   const errors: NodeListOf<HTMLParagraphElement> | null =
@@ -105,6 +108,8 @@ export const initContactForm = () => {
   }
 
   async function submitForm(data: FormData) {
+    submitBtn?.classList.add("loading");
+    submitBtn?.setAttribute("disabled", "disabled");
     try {
       const response = await fetch("../api/send-email.php", {
         method: "POST",
@@ -127,6 +132,8 @@ export const initContactForm = () => {
       showMessage(messages.serverError, "error");
       console.error(error);
     }
+    submitBtn?.classList.remove("loading");
+    submitBtn?.removeAttribute("disabled");
   }
 
   function clearErrors() {

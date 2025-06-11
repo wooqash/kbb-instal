@@ -114,6 +114,25 @@ iframe {
   background-color: var(--secondary-color-hover);
 }
 
+.btn[disabled] {
+  cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.btn i {
+  width: 24px;
+  height: 24px;
+  display: none;
+  vertical-align: middle;
+  margin-inline-start: 10px;
+}
+
+.btn.loading i {
+  display: inline-block;
+}
+
 .hover-underline {
   display: inline-block;
   position: relative;
