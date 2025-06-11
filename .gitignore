@@ -28,3 +28,4 @@ coverage
 .env
 .git
 tmp
+.htaccess
