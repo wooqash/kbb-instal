@@ -229,6 +229,10 @@ header.mobile {
   width: 100px;
 }
 
+.logo-link {
+  display: flex;
+}
+
 .logo img {
   height: 100%;
   margin-inline-end: 10px;
@@ -1010,6 +1014,7 @@ nav a.hover-underline.active::after {
   border-style: solid;
   border-radius: 4px;
   font-family: inherit;
+  height: 44px;
   padding: 12px;
   width: 100%;
 }
