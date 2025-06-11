@@ -618,8 +618,8 @@ nav a.hover-underline.active::after {
   box-shadow: 0 5px 15px var(--shadow-color);
   flex: 1;
   margin-block-end: 20px;
-  max-width: 250px;
-  min-width: 200px;
+  max-width: 100%;
+  min-width: 250px;
   padding: 30px 20px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -688,6 +688,7 @@ nav a.hover-underline.active::after {
   background: none;
   border: 0;
   cursor: pointer;
+  color: var(--text-color);
   font-weight: 500;
   margin: 5px;
   padding: 8px 20px;
@@ -698,7 +699,7 @@ nav a.hover-underline.active::after {
 .filter-btn:hover {
   background-color: var(--primary-color);
   border-radius: 4px;
-  color: #fff;
+  color: var(--text-color-on-button);
 }
 
 .filter-btn.active:hover {
