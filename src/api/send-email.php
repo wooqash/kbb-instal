@@ -65,23 +65,18 @@ try {
         if ($subject) {
             switch ($subject) {
                 case "services":
-                    $subject = "USŁUG";
+                    $subject = "[USLUGI]";
                     break;
                 case "warehouse":
-                    $subject = "HURTOWNI";
+                    $subject = "[HURTOWNIA]";
                     break;
                 case "others":
-                    $subject = "INNEGO tematu";
+                    $subject = "[INNE]";
                     break;
             }
         }
 
-        $subject = "Zapytanie z formularza kontaktowego ws. " . $subject;
-        // $emailBody = "Wiadomość od Pana/Pani: <strong>$name\n</strong>";
-        // $emailBody = "$message\n\n";
-        // $emailBody = "<strong>Dane kontaktowe:</strong>";
-        // $emailBody .= "Email: $email\n";
-        // $emailBody .= "Telefon: $phone\n";
+        $subject = $subject . " - zapytanie z formularza kontaktowego";
         $emailBody = "
         <html>
                         <head>
@@ -89,7 +84,8 @@ try {
                         </head>
                         <body>
                             <p>Wiadomość od Pana/Pani: <strong>$name</strong></p>
-                            <p>$message</p><br /><br />
+                            <p>$message</p><br />
+                            <hr />
                             <p><u>Dane kontaktowe: </u></p>
                             <p>Email: <strong>$email</strong></p>
                             <p>Telefon: <strong>$phone</strong></p>
