@@ -93,6 +93,15 @@ textarea {
   color: var(--text-color);
 }
 
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -288,7 +297,7 @@ nav .hover-underline::after {
   bottom: -5px;
 }
 
-nav a.hover-underline.active::after {
+body:not(.scroll-blocked) nav a.hover-underline.active::after {
   transform: scaleX(1);
 }
 
@@ -312,6 +321,13 @@ nav a.hover-underline.active::after {
   overflow: hidden;
   position: relative;
   text-align: center;
+}
+
+#hero a:focus,
+#hero a:focus-visible,
+#hero button:focus,
+#hero button:focus-visible {
+  outline-color: var(--bg-color);
 }
 
 .hero-slider {
@@ -1233,10 +1249,7 @@ footer {
   display: block;
   margin: 0 auto;
 }
-#scrollToTopBtn:focus {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
+
 body:not(.scroll-blocked) #scrollToTopBtn.show {
   display: block;
   opacity: 1;
