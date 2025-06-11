@@ -15,10 +15,30 @@ type FormData = {
   recaptchaToken: unknown;
 };
 
-const messages = {
+type errorTypes = {
+  required?: string;
+  min?: string;
+  max?: string;
+  minLength?: string;
+  minHeight?: string;
+  maxHeight?: string;
+  step?: string;
+  email?: string;
+  url?: string;
+};
+
+const messages: Record<string, string> = {
   success: "🎉 Formularz został wysłany! 🎉",
   failed: "⛔ Mamy jakiś problem, niestety formularz nie został wysłany!",
   serverError: "⛔ Błąd połączenia z serwerem ⛔",
+};
+
+const errorMessages: Record<string, errorTypes> = {
+  name: { required: "Pole 'Imię i nazwisko' jest obowiązkowe!" },
+  email: { required: "Pole 'Email' jest obowiązkowe!" },
+  phone: { required: "Pole 'Telefon' jest obowiązkowe!" },
+  subject: { required: "Pole 'Temat' jest obowiązkowe!" },
+  message: { required: "Pole 'Wiadomość' jest obowiązkowe!" },
 };
 
 export const initContactForm = () => {
@@ -38,7 +58,7 @@ export const initContactForm = () => {
     message: document.querySelector("#message"),
   };
 
-  const errorMessages: FormErrorControls = {
+  const errorMessagesControls: FormErrorControls = {
     name: document.querySelector("#nameError"),
     email: document.querySelector("#emailError"),
     phone: document.querySelector("#phoneError"),
@@ -76,7 +96,15 @@ export const initContactForm = () => {
       | HTMLInputElement
       | HTMLTextAreaElement
       | HTMLSelectElement;
-    const errorElement = target.id ? errorMessages[target.id] : null;
+    const errorElement = target.id ? errorMessagesControls[target.id] : null;
+    const errorRequiredMessage = target.id
+      ? errorMessages[target.id].required
+      : null;
+
+    if (!target.value && errorRequiredMessage) {
+      target.setCustomValidity(errorRequiredMessage);
+    }
+
     if (errorElement) {
       errorElement.textContent = target.validationMessage;
     }
@@ -87,7 +115,11 @@ export const initContactForm = () => {
       | HTMLInputElement
       | HTMLTextAreaElement
       | HTMLSelectElement;
-    const errorElement = target.id ? errorMessages[target.id] : null;
+    const errorElement = target.id ? errorMessagesControls[target.id] : null;
+
+    if (target.value) {
+      target.setCustomValidity("");
+    }
     if (errorElement) {
       errorElement.textContent = "";
     }
