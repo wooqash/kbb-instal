@@ -1,5 +1,6 @@
 export const initHeader = () => {
-  const MOBILE = 768;
+  const MOBILE = 992;
+  const MENU_DIFF = 40;
   // const isMobile = false;
   let isScrolled = false;
   let menuIsOpen = false;
@@ -34,10 +35,6 @@ export const initHeader = () => {
   window.addEventListener("resize", function () {
     checkIsMobile();
   });
-
-  // window.addEventListener("DOMContentLoaded", function () {
-  //   checkIsMobile();
-  // });
 
   // Mobile Menu Toggle
   mobileMenuBtn?.addEventListener("click", function () {
@@ -97,12 +94,17 @@ export const initHeader = () => {
 
       const targetId = this.getAttribute("href");
       if (targetId) {
+        console.log(targetId);
         const targetSection: HTMLAnchorElement | null =
           document.querySelector(targetId);
         const headerHeight = header?.offsetHeight;
         if (targetSection && headerHeight) {
+          const topShift =
+            targetId === "#hero"
+              ? targetSection.offsetTop - headerHeight
+              : targetSection.offsetTop - (headerHeight - MENU_DIFF);
           window.scrollTo({
-            top: targetSection.offsetTop - headerHeight,
+            top: topShift,
             behavior: "smooth",
           });
         }
