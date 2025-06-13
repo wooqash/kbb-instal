@@ -57,7 +57,7 @@ try {
         }
 
         // Przygotowanie i wysyłka maila
-        $to = 'tester@kbb-instal.pl';
+        $to = 'k.brzozowski@kbb-instal.pl';
         $headers = "From: " . $email . "\r\n";
         $headers .= "Reply-To: " . $email . "\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
