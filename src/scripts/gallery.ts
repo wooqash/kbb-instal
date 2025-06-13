@@ -1,4 +1,6 @@
-const portfolioItems: NodeListOf<HTMLDivElement> =
+import { initFocusTrap } from "./focus-trap";
+
+const portfolioItems: NodeListOf<HTMLAnchorElement> =
   document.querySelectorAll(".portfolio-item");
 const loadMoreBtn = document.getElementById("load-more-btn");
 const lightbox = document.getElementById("lightbox");
@@ -21,7 +23,7 @@ const totalImages = document.getElementById("total-images") as HTMLSpanElement;
 
 let currentImageIndex = 0;
 let currentCategory: string | null | undefined = "all";
-let filteredItems: HTMLDivElement[] = [];
+let filteredItems: HTMLAnchorElement[] = [];
 
 // Dodaj zmienne globalne
 const initialShow = 8; // Początkowa liczba widocznych zdjęć
@@ -76,7 +78,8 @@ export const initGallery = () => {
 
   // Obsługa kliknięcia na element portfolio
   portfolioItems.forEach(item => {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
       const image = this.querySelector("img");
       const title = this.querySelector("h3")?.textContent || "";
       const description = this.querySelector("p")?.textContent || "";
@@ -140,6 +143,9 @@ export const initGallery = () => {
     currentImageIndex = index;
     if (currentIndex) {
       currentIndex.textContent = currentImageIndex + 1 + "";
+    }
+    if (lightbox) {
+      initFocusTrap(lightbox);
     }
     lightbox?.classList.add("active");
     document.body.style.overflow = "hidden"; // Zapobiega przewijaniu strony

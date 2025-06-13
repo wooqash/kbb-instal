@@ -99,7 +99,7 @@ textarea {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--secondary-color);
+  outline: 2px solid var(--primary-color-hover);
   outline-offset: 4px;
   border-radius: var(--border-radius-small);
 }
@@ -358,7 +358,7 @@ body:not(.scroll-blocked) nav a.hover-underline.active::after {
 }
 
 .hero-content h1 {
-  animation: animate-gradient 3.5s linear infinite;
+  /* animation: animate-gradient 3.5s linear infinite; */
   background: #2a7b9b;
   background: linear-gradient(
     90deg,
@@ -860,6 +860,7 @@ body:not(.scroll-blocked) nav a.hover-underline.active::after {
 }
 
 .lightbox-controls {
+  bottom: 10px;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
@@ -870,7 +871,7 @@ body:not(.scroll-blocked) nav a.hover-underline.active::after {
 
 .lightbox-prev,
 .lightbox-next {
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--primary-color);
   border: 0;
   border-radius: var(--border-radius-circular);
   color: #fff;
@@ -883,7 +884,12 @@ body:not(.scroll-blocked) nav a.hover-underline.active::after {
 
 .lightbox-prev:hover,
 .lightbox-next:hover {
-  background: rgba(35, 190, 19, 0.8);
+  background: var(--primary-color-hover);
+}
+
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
+  border-radius: var(--border-radius-circular);
 }
 
 .lightbox-image-container {
